@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Study on 2018 Graduates of FMIPA UNISBA</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../dist/css/final.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <!-- FONT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JAVASCRIPT -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- ICON -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="shortcut icon"
+      href="../../dist/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body class="">
+    <!-- Header Start-->
+    <header
+      class="absolute left-0 top-0 z-50 flex w-full items-center bg-transparent selection:bg-teal-700 selection:text-white dark:selection:bg-teal-300 dark:selection:text-dark"
+    >
+      <div class="container">
+        <div class="relative flex items-center justify-between py-6 lg:py-0">
+          <div class="px-4">
+            <a
+              href="../index.html"
+              class="block font-sans text-4xl font-bold text-secondary dark:text-teal-500 lg:hidden lg:py-0 lg:text-5xl"
+              >Portfolio</a
+            >
+          </div>
+          <button
+            id="hamburger"
+            name="hamburger"
+            type="button"
+            class="absolute right-4 block lg:hidden"
+          >
+            <span
+              class="hamburger-line origin-top-left transition duration-300 ease-in-out"
+            ></span>
+            <span
+              class="hamburger-line transition duration-300 ease-in-out"
+            ></span>
+            <span
+              class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"
+            ></span>
+          </button>
+          <nav
+            id="nav-menu"
+            class="absolute -bottom-36 right-4 hidden w-full max-w-[250px] rounded-lg bg-white shadow-lg dark:border-2 dark:border-teal-600 dark:bg-dark lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:border-none lg:dark:bg-transparent"
+          >
+            <ul
+              class="relative block py-6 lg:mx-auto lg:flex lg:justify-center"
+            >
+              <li class="group">
+                <a
+                  href="../index.html"
+                  class="link mx-8 flex py-2 text-base font-medium text-secondary transition-all duration-1000 hover:mix-blend-hard-light group-hover:text-teal-500 dark:text-white dark:hover:mix-blend-normal lg:dark:hover:mix-blend-normal"
+                  >Indriyani</a
+                >
+              </li>
+              <li class="group">
+                <a
+                  href="work.html"
+                  class="link mx-8 flex py-2 text-base font-medium text-secondary transition-all duration-1000 hover:mix-blend-hard-light group-hover:text-teal-500 dark:text-white dark:hover:mix-blend-normal lg:dark:hover:mix-blend-normal"
+                  >work</a
+                >
+              </li>
+              <li class="mx-8 mt-3 flex items-center lg:mt-1">
+                <div class="flex">
+                  <span
+                    class="mr-2 text-sm text-secondary transition-all duration-1000 dark:text-white"
+                    ><span class="material-symbols-outlined">
+                      light_mode
+                    </span></span
+                  >
+                  <input type="checkbox" class="hidden" id="dark-toggle" />
+                  <label for="dark-toggle">
+                    <div
+                      class="flex h-6 w-10 cursor-pointer items-center rounded-full bg-secondary p-1 transition-all duration-300 dark:bg-white"
+                    >
+                      <div
+                        class="toggle-circle h-4 w-4 rounded-full bg-white transition-all duration-300 ease-in-out dark:bg-secondary"
+                      ></div>
+                    </div>
+                  </label>
+                  <span
+                    class="ml-2 text-sm text-secondary transition-all duration-1000 dark:text-white"
+                    ><span class="material-symbols-outlined">
+                      dark_mode
+                    </span></span
+                  >
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- Header End-->
+    <!-- Hero Start -->
+    <section
+      id="home"
+      class="min-h-screen bg-[url(../../dist/img/bg/light-bg.svg)] pb-32 pt-36 selection:bg-teal-700 selection:text-white dark:bg-dark dark:bg-[url(../../dist/img/bg/dark-bg.svg)] dark:selection:bg-teal-300 dark:selection:text-dark"
+    >
+      <div class="container">
+        <div class="lg:mt-16">
+          <div class="mb-20 w-full px-2 text-center md:px-4 lg:mb-0 lg:mt-24">
+            <div class="flex items-center justify-center p-10">
+              <div class="w-max">
+                <h1
+                  class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-secondary px-2 py-2 pr-5 font-sans text-4xl font-bold text-secondary dark:border-r-white dark:text-teal-400 md:text-6xl lg:text-8xl"
+                >
+                  Work of Group 4
+                </h1>
+              </div>
+            </div>
+            <h2
+              class="mb-3 mt-5 text-xl font-bold text-teal-600 dark:text-white md:text-5xl lg:text-7xl"
+            >
+              Unlocking the Impact of Organizational Experience on Workforce
+            </h2>
+            <p
+              class="mx-auto mb-10 mt-6 w-2/3 rounded-md bg-teal-200 px-2 py-4 text-sm font-medium leading-relaxed text-secondary opacity-80 dark:text-secondary md:mt-10 md:text-xl lg:text-2xl"
+            >
+              Productivity: A Study on 2018 Graduates of
+              <a
+                href="https://admission.unisba.ac.id/fakultas-mipa/"
+                target="_blank"
+              >
+                <span
+                  class="rounded-lg bg-teal-300 px-2 py-2 dark:selection:bg-teal-200"
+                  >FMIPA UNISBA</span
+                ></a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero End -->
+    <!-- Content Start -->
+    <section
+      class="min-h-screen bg-[url(../../dist/img/bg/light-bg.svg)] pb-32 pt-36 selection:bg-teal-700 selection:text-white dark:bg-dark dark:bg-[url(../../dist/img/bg/dark-bg.svg)] dark:selection:bg-teal-300 dark:selection:text-dark"
+    >
+      <div class="container">
+        <div class="lg:mt-16">
+          <div class="mb-20 w-full px-2 md:px-4 lg:mb-0 lg:mt-24">
+            <div
+              class="rounded-3xl border-2 border-teal-500 bg-[url(../../dist/img/bg/sub-dark-bg.svg)] p-4 drop-shadow-[5px_5px_100px_rgba(153,246,228,0.3)] dark:bg-[url(../../dist/img/bg/sub-light-bg.svg)] dark:drop-shadow-[5px_5px_100px_rgba(20,184,166,0.3)] md:p-6"
+            >
+              <div class="flex justify-start">
+                <div
+                  class="mb-2 flex w-10/12 justify-start rounded-xl bg-teal-100 px-4 py-4 text-secondary dark:bg-teal-800 dark:text-white md:mb-3 md:w-5/6 lg:mb-4 lg:w-3/4"
+                >
+                  <p class="text-xs md:text-sm lg:text-base">
+                    The actual project was conducted in Indonesian language, as
+                    the research focused on the FMIPA UNISBA 2018 graduates and
+                    their experiences in the local context. We conducted the
+                    survey, collected data, and performed the analysis using
+                    Indonesian language materials. However, for the purpose of
+                    sharing our project and findings with a wider audience, we
+                    have translated and presented the information in English to
+                    ensure accessibility and understanding for readers who are
+                    interested in the topic of organizational experience and
+                    workforce productivity.
+                  </p>
+                </div>
+              </div>
+              <div class="flex justify-end">
+                <div
+                  class="mb-2 w-10/12 rounded-xl bg-teal-100 px-4 py-4 text-secondary dark:bg-teal-800 dark:text-white md:mb-3 md:w-5/6 lg:mb-4 lg:w-3/4"
+                >
+                  <p class="text-xs md:text-sm lg:text-base">
+                    The background of our research relates to the importance of
+                    organizational experience in enhancing workforce
+                    productivity. In this context, our focus is on the 2018
+                    cohort of FMIPA UNISBA graduates. We are interested in
+                    understanding how the organizational experience of these
+                    graduates can impact their productivity in the workplace.
+                  </p>
+                </div>
+              </div>
+              <div class="flex justify-end">
+                <div
+                  class="mb-2 w-11/12 rounded-xl bg-teal-100 px-4 py-4 text-secondary dark:bg-teal-800 dark:text-white md:mb-3 md:w-5/6 lg:mb-4 lg:w-4/5"
+                >
+                  <p class="text-xs md:text-sm lg:text-base">
+                    Initially, we conducted a survey involving the 2018 FMIPA
+                    UNISBA graduates to gather data on their organizational
+                    experience during their studies. We also collected
+                    information about their current level of productivity in the
+                    workplace. With this data, we had the opportunity to examine
+                    whether there is a relationship between organizational
+                    experience and productivity.
+                  </p>
+                </div>
+              </div>
+              <div class="flex justify-start">
+                <div
+                  class="mb-2 w-8/12 rounded-xl bg-teal-100 px-4 py-4 text-secondary dark:bg-teal-800 dark:text-white md:mb-3 md:w-4/6 lg:mb-4 lg:w-3/5"
+                >
+                  <p class="text-xs md:text-sm lg:text-base">
+                    The data analysis process began with preparing and cleaning
+                    the obtained data. We removed irrelevant or duplicate data
+                    and selected the most relevant data for our analysis. Then,
+                    we organized the data into tables and graphs to facilitate
+                    understanding and analysis.
+                  </p>
+                </div>
+              </div>
+              <div class="flex justify-end">
+                <div
+                  class="mb-2 w-10/12 rounded-xl bg-teal-100 px-4 py-4 text-secondary dark:bg-teal-800 dark:text-white md:mb-3 md:w-9/12 lg:mb-4 lg:w-5/6"
+                >
+                  <p class="text-xs md:text-sm lg:text-base">
+                    Next, we performed descriptive analysis using statistical
+                    methods to gain initial insights into the variables we were
+                    studying. We calculated the means, medians, and modes of the
+                    organizational experience and workforce productivity
+                    variables, allowing us to observe general trends and
+                    patterns that may emerge from the data.
+                  </p>
+                </div>
+              </div>
+              <div class="flex justify-start">
+                <div
+                  class="mb-2 flex w-10/12 justify-start rounded-xl bg-teal-100 px-4 py-4 text-secondary dark:bg-teal-800 dark:text-white md:mb-3 md:w-5/6 lg:mb-4 lg:w-3/4"
+                >
+                  <p class="text-xs md:text-sm lg:text-base">
+                    Subsequently, we applied simple regression analysis to test
+                    the relationship between organizational experience
+                    (independent variable) and workforce productivity (dependent
+                    variable). We calculated regression coefficients and
+                    constants and conducted hypothesis tests to determine if
+                    organizational experience has a significant influence on
+                    workforce productivity.
+                  </p>
+                </div>
+              </div>
+              <div class="flex justify-start">
+                <div
+                  class="mb-2 flex w-9/12 justify-start rounded-xl bg-teal-100 px-4 py-4 text-secondary dark:bg-teal-800 dark:text-white md:mb-3 md:w-4/6 lg:mb-4 lg:w-3/5"
+                >
+                  <p class="text-xs md:text-sm lg:text-base">
+                    After performing the statistical analysis, we evaluated the
+                    research findings and concluded whether organizational
+                    experience has a positive impact on workforce productivity.
+                    We also provided recommendations for students preparing to
+                    enter the job market based on our findings.
+                  </p>
+                </div>
+              </div>
+              <div class="flex justify-end">
+                <div
+                  class="mb-2 w-11/12 rounded-xl bg-teal-100 px-4 py-4 text-secondary dark:bg-teal-800 dark:text-white md:mb-3 md:w-5/6 lg:mb-4 lg:w-4/5"
+                >
+                  <p class="text-xs md:text-sm lg:text-base">
+                    As a group of researchers, we recognize the importance of
+                    disseminating our findings to the public. Therefore, we
+                    decided to create an informative and engaging blog article.
+                    This article will cover the background of our research, the
+                    analysis process we conducted, as well as the results and
+                    recommendations derived. We hope our blog article can
+                    provide insights and inspiration for readers interested in
+                    the topic of organizational experience and workforce
+                    productivity, especially for students preparing to enter the
+                    job market.
+                  </p>
+                </div>
+              </div>
+              <div class="flex justify-start">
+                <div
+                  class="mb-2 w-11/12 rounded-xl bg-teal-100 px-4 py-4 text-secondary dark:bg-teal-800 dark:text-white md:mb-3 md:w-5/6 lg:mb-4 lg:w-4/5"
+                >
+                  <p class="text-xs md:text-sm lg:text-base">
+                    Through this journey, we have learned a great deal about the
+                    significance of organizational experience and how it can
+                    impact workforce productivity. We have also developed our
+                    analytical skills in data analysis and drawing conclusions
+                    that can be applied in the context of the working world.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="lg:mt-32">
+              <div
+                class="mx-auto mt-10 w-10/12 cursor-pointer rounded-lg bg-teal-200 px-5 py-3 text-center text-secondary transition duration-300 ease-in-out hover:shadow-xl hover:shadow-teal-800/10 dark:hover:shadow-xl dark:hover:shadow-teal-800/60 md:w-2/4"
+              >
+                <h4 class="text-base lg:text-lg">See Original File Below</h4>
+              </div>
+              <div
+                class="pdf-container rounded-3xl border-2 border-teal-500 bg-[url(../../dist/img/bg/sub-dark-bg.svg)] p-4 drop-shadow-[5px_5px_100px_rgba(153,246,228,0.3)] dark:bg-[url(../../dist/img/bg/sub-light-bg.svg)] dark:drop-shadow-[5px_5px_100px_rgba(20,184,166,0.3)] md:mt-10 md:p-6"
+              >
+                <iframe
+                  src="../../dist/file/TA_3_Kel 4_Artikel.pdf#toolbar=0"
+                  frameborder="0"
+                  type="application/pdf#view=fitH"
+                  width="100%"
+                  height="600px"
+                  class="min-h-screen w-full rounded-xl dark:border-2 dark:border-teal-500"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Content End -->
+    <!-- Footer Start -->
+    <footer
+      class="bg-neutral-950 pb-12 pt-24 selection:bg-teal-700 selection:text-white dark:bg-dark dark:selection:bg-teal-300 dark:selection:text-dark"
+    >
+      <div class="container">
+        <div class="flex-wrap justify-center md:flex">
+          <div class="mb-6 px-4 text-white md:w-2/5 lg:w-2/4">
+            <h2 class="mb-2 text-xl font-light text-gray-300">Indriyani</h2>
+            <ul>
+              <li>
+                <a
+                  href="mailto:indriani.indri2239@gmail.com"
+                  target="_blank"
+                  class="footer-menu font-medium md:text-lg lg:text-2xl"
+                >
+                  indriani.indri2239@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.link/t4ikqt"
+                  target="_blank"
+                  class="footer-menu font-medium md:text-lg lg:text-2xl"
+                  >+62 813 1508 3032</a
+                >
+              </li>
+            </ul>
+
+            <h2
+              class="md:text-md mb-4 mt-10 font-light text-gray-300 lg:text-xl"
+            >
+              Connect
+            </h2>
+            <a href="https://www.instagram.com/indriyaaaani/" target="_blank"
+              ><box-icon
+                type="logo"
+                name="instagram"
+                class="mr-2 h-10 w-10 rounded-full border-2 border-white fill-white p-2 transition duration-300 ease-in-out hover:scale-110 hover:border-white hover:bg-gradient-to-tr hover:from-[#FFD954] hover:via-[#DA1984] hover:to-[#3D55DD] hover:fill-white hover:outline hover:outline-pink-700"
+              ></box-icon
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/indriyani-4b15b9209"
+              target="_blank"
+              ><box-icon
+                type="logo"
+                name="linkedin"
+                class="mr-2 h-10 w-10 rounded-full border-2 border-white fill-white p-2 transition duration-300 ease-in-out hover:scale-110 hover:border-white hover:bg-sky-600 hover:fill-white hover:outline hover:outline-sky-600"
+              ></box-icon
+            ></a>
+            <a
+              href="https://www.tiktok.com/@indriyanidriya?_t=8cooRa2SWro&_r=1"
+              target="_blank"
+              ><box-icon
+                type="logo"
+                name="tiktok"
+                class="mr-2 h-10 w-10 rounded-full border-2 border-white fill-white p-2 transition duration-300 ease-in-out hover:scale-110 hover:border-white hover:bg-black hover:fill-white hover:outline hover:outline-rose-500"
+              ></box-icon
+            ></a>
+          </div>
+          <div class="mb-6 px-4 text-white md:w-1/5 lg:w-1/4">
+            <h2 class="mb-2 text-xl font-light text-gray-300">Menu</h2>
+            <ul>
+              <li>
+                <a
+                  href="#home"
+                  class="footer-menu font-medium md:text-lg lg:text-2xl"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="work.html"
+                  class="footer-menu font-medium md:text-lg lg:text-2xl"
+                  >Work</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mb-6 px-4 text-white md:w-1/5 md:text-right lg:w-1/4">
+            <h2 class="mb-2 text-xl font-light text-gray-300">My Office</h2>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d247.58590026109854!2d107.5018510325084!3d-6.845640914916571!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNTAnNDQuMCJTIDEwN8KwMzAnMDYuNiJF!5e0!3m2!1sid!2sid!4v1685879157647!5m2!1sid!2sid"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="h-32 w-full md:float-right md:h-32 md:w-40 lg:h-48 lg:w-48"
+            ></iframe>
+          </div>
+        </div>
+        <hr class="h-px border-0 bg-gray-600 dark:bg-gray-700" />
+        <div class="mt-4 w-full text-center lg:px-4 lg:text-left">
+          <p class="text-sm font-extralight text-gray-300">
+            <a
+              href="https://www.instagram.com/indriyaaaani/"
+              target="_blank"
+              class="credit"
+              >©Indriyani. </a
+            >All Rights Reserved 2023.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- SCRIPT -->
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

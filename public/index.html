@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>indri.driya</title>
+    <link rel="stylesheet" href="../dist/css/final.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <!-- Icon -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="shortcut icon"
+      href="../dist/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- icon end -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("tVTs9pf6-dHTgQ1Mk");
+      })();
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header
+      class="absolute left-0 top-0 z-50 flex w-full items-center bg-transparent selection:bg-teal-700 selection:text-white dark:selection:bg-teal-300 dark:selection:text-dark"
+    >
+      <div class="container">
+        <div class="relative flex items-center justify-between">
+          <div class="px-4">
+            <a
+              href="#home"
+              class="block py-6 font-sans text-4xl font-bold text-secondary dark:text-teal-500 lg:py-0 lg:text-5xl"
+              >Indriyani</a
+            >
+          </div>
+          <div class="flex items-center">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="absolute right-4 block lg:hidden"
+            >
+              <span
+                class="hamburger-line origin-top-left transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"
+              ></span>
+            </button>
+            <nav
+              id="nav-menu"
+              class="absolute -bottom-80 right-4 hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:border-2 dark:border-teal-600 dark:bg-dark lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:border-none lg:dark:bg-transparent"
+            >
+              <ul class="relative block lg:flex">
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="link mx-8 flex py-2 text-base font-medium text-secondary transition-all duration-1000 hover:mix-blend-hard-light group-hover:text-teal-500 dark:text-white dark:hover:mix-blend-normal lg:dark:hover:mix-blend-normal"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#about"
+                    class="link mx-8 flex py-2 text-base font-medium text-secondary transition-all duration-1000 hover:mix-blend-hard-light group-hover:text-teal-500 dark:text-white dark:hover:mix-blend-normal lg:dark:hover:mix-blend-normal"
+                    >About</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#portfolio"
+                    class="link mx-8 flex py-2 text-base font-medium text-secondary transition-all duration-1000 hover:mix-blend-hard-light group-hover:text-teal-500 dark:text-white dark:hover:mix-blend-normal lg:dark:hover:mix-blend-normal"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#client"
+                    class="link mx-8 flex py-2 text-base font-medium text-secondary transition-all duration-1000 hover:mix-blend-hard-light group-hover:text-teal-500 dark:text-white dark:hover:mix-blend-normal lg:dark:hover:mix-blend-normal"
+                    >Clients</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#blog"
+                    class="link mx-8 flex py-2 text-base font-medium text-secondary transition-all duration-1000 hover:mix-blend-hard-light group-hover:text-teal-500 dark:text-white dark:hover:mix-blend-normal lg:dark:hover:mix-blend-normal"
+                    >Blog</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#contact"
+                    class="link mx-8 flex py-2 text-base font-medium text-secondary transition-all duration-1000 hover:mix-blend-hard-light group-hover:text-teal-500 dark:text-white dark:hover:mix-blend-normal lg:dark:hover:mix-blend-normal"
+                    >Contact</a
+                  >
+                </li>
+                <li class="mt-3 flex items-center pl-6 lg:mt-1">
+                  <div class="flex">
+                    <span
+                      class="mr-2 text-sm text-secondary transition-all duration-1000 dark:text-white"
+                      ><span class="material-symbols-outlined">
+                        light_mode
+                      </span></span
+                    >
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div
+                        class="flex h-6 w-10 cursor-pointer items-center rounded-full bg-secondary p-1 transition-all duration-300 dark:bg-white"
+                      >
+                        <div
+                          class="toggle-circle h-4 w-4 rounded-full bg-white transition-all duration-300 ease-in-out dark:bg-secondary"
+                        ></div>
+                      </div>
+                    </label>
+                    <span
+                      class="ml-2 text-sm text-secondary transition-all duration-1000 dark:text-white"
+                      ><span class="material-symbols-outlined">
+                        dark_mode
+                      </span></span
+                    >
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <section
+      id="home"
+      class="bg-teal-100 bg-opacity-60 pt-36 selection:bg-teal-700 selection:text-white dark:bg-dark dark:selection:bg-teal-300 dark:selection:text-dark md:pb-32"
+    >
+      <div class="container">
+        <div class="flex flex-wrap lg:mt-16">
+          <div
+            class="mb-20 w-full self-center px-2 md:px-4 lg:mb-0 lg:mt-24 lg:w-1/2"
+          >
+            <h1
+              class="text-base font-semibold text-secondary dark:text-white md:mb-2 md:text-xl"
+            >
+              Hei there 🙌,
+              <span
+                class="block text-4xl font-bold text-secondary dark:text-white md:mt-2 lg:text-5xl"
+                >Indriyani is here!</span
+              >
+            </h1>
+            <h2
+              class="mb-5 text-lg font-medium text-teal-600 dark:text-white lg:text-2xl"
+            >
+              Data
+              <span class="font-semibold text-secondary dark:text-neutral-400"
+                >Analytics</span
+              >
+              & Photography
+              <span class="font-semibold text-secondary dark:text-neutral-400"
+                >Fusion</span
+              >
+            </h2>
+            <p
+              class="mb-10 font-medium leading-relaxed text-secondary opacity-80 dark:text-neutral-400"
+            >
+              The Intersection of Data and Creativity: Capturing Moments,
+              Uncovering Patterns
+            </p>
+
+            <a
+              href="#contact"
+              class="rounded-md bg-teal-500 px-10 py-4 text-lg font-semibold text-white transition duration-500 ease-in-out hover:bg-teal-400 hover:shadow-xl hover:shadow-teal-500/50"
+              >let's talk!</a
+            >
+          </div>
+          <div class="w-full self-end px-2 md:px-4 lg:w-1/2">
+            <div
+              class="group relative z-10 mt-10 bg-clip-padding lg:right-0 lg:mt-0"
+            >
+              <a
+                href="https://www.instagram.com/indriyaaaani/"
+                target="_blank"
+                class="relative"
+              >
+                <img
+                  src="../dist/img/profile.png"
+                  alt="profile photos"
+                  class="relative mx-auto w-96 max-w-full origin-center animate-myAnim"
+                />
+                <img
+                  src="../dist/img/cat.png"
+                  alt="sleepy cat"
+                  class="absolute -bottom-12 -right-5 w-80 max-w-full scale-[1.6] sm:-bottom-12 sm:left-44 md:left-44 md:w-96"
+                />
+              </a>
+              <div
+                class="absolute -right-8 -top-32 -z-10 origin-bottom-left scale-0 opacity-0 transition delay-300 duration-1000 group-hover:block group-hover:scale-100 group-hover:opacity-100 md:right-8 md:top-0 md:group-hover:scale-110"
+              >
+                <img src="../dist/img/flower.png" alt="flower" class="w-48" />
+              </div>
+              <div
+                class="absolute -left-6 -top-32 -z-10 origin-bottom-right scale-0 opacity-0 transition delay-100 duration-1000 group-hover:block group-hover:scale-90 group-hover:opacity-100 md:left-8 md:top-0 md:group-hover:scale-110"
+              >
+                <img
+                  src="../dist/img/flower.png"
+                  alt="flower"
+                  class="w-48 -scale-x-100"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Start -->
+    <section
+      id="about"
+      class="bg-woman1 bg-opacity-30 pb-32 pt-36 selection:bg-teal-700 selection:text-white dark:bg-dark dark:selection:bg-teal-300 dark:selection:text-dark lg:pb-64"
+    >
+      <div class="container flex flex-wrap">
+        <div class="mb-4 w-full px-2 md:px-4">
+          <h4 class="text-2xl font-semibold text-secondary dark:text-white">
+            About me
+          </h4>
+          <h2 class="mb-12 text-teal-600 dark:text-neutral-400">
+            Unleashing data stories, capturing life moments
+          </h2>
+          <div
+            class="relative z-10 items-center gap-4 overflow-hidden rounded-md bg-teal-50 bg-clip-padding px-6 py-10 shadow-md dark:bg-teal-950 md:flex"
+          >
+            <div>
+              <p class="mb-6 text-teal-700 dark:text-teal-500 sm:text-lg">
+                <span
+                  class="mb-4 block text-4xl font-semibold text-secondary dark:text-teal-300"
+                  >Welcome to my website!</span
+                >
+                I am a Data Analyst and Freelance Photographer dedicated to
+                combining analytical expertise with visual beauty in my work. I
+                believe that data provides valuable insights, while photography
+                has the power to capture precious moments.
+              </p>
+              <a
+                href="#"
+                class="start-1 rounded-sm bg-tertiary px-4 py-2 text-white transition duration-300 hover:shadow-lg hover:shadow-tertiary/50"
+                >read more</a
+              >
+            </div>
+            <img
+              src="../dist/img/1.png"
+              alt="Data 1"
+              class="mx-auto mt-6 transition duration-500 ease-in-out hover:-rotate-12 hover:scale-110 hover:shadow-xl hover:shadow-neutral-300 dark:hover:shadow-neutral-950/50 md:mt-0"
+            />
+
+            <span class="absolute -left-20 -top-20 -z-10">
+              <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 500 500"
+                width="100%"
+                id="blobSvg"
+                style="opacity: 0.8"
+                filter="blur(0px)"
+                transform="rotate(120) scale(1.5)"
+              >
+                <defs>
+                  <linearGradient
+                    id="gradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="0%"
+                    y2="100%"
+                  >
+                    <stop
+                      offset="0%"
+                      style="stop-color: rgb(15, 118, 110)"
+                    ></stop>
+                    <stop
+                      offset="100%"
+                      style="stop-color: rgb(20, 184, 166)"
+                    ></stop>
+                  </linearGradient>
+                </defs>
+                <path id="blob" fill="url(#gradient)" style="opacity: 0.1">
+                  <animate
+                    attributeName="d"
+                    dur="25s"
+                    repeatCount="indefinite"
+                    values="M437.48517,301.93698Q392.82947,353.87396,357.50371,413.21131Q322.17795,472.54867,247.51112,479.51159Q172.8443,486.47452,129.54819,427.64458Q86.25209,368.81464,81.57785,309.40732Q76.90361,250,83.86283,191.93327Q90.82205,133.86654,141.98146,104.152Q193.14087,74.43745,247.01483,83.88926Q300.88878,93.34106,355.51112,113.62234Q410.13346,133.90361,446.13717,191.95181Q482.14087,250,437.48517,301.93698Z;M423.38828,307.00416Q406.39243,364.00831,353.55217,384.57202Q300.71191,405.13573,242.06787,430.50416Q183.42382,455.87258,116.5554,425.63666Q49.68697,395.40075,58.87581,322.70037Q68.06464,250,86.66067,197.31625Q105.2567,144.63251,148.86843,108.53648Q192.48015,72.44045,252.10019,66.13989Q311.72022,59.83933,378.54063,84.21929Q445.36105,108.59925,442.87258,179.29963Q440.38412,250,423.38828,307.00416Z;M424.84079,321.86371Q447.86386,393.72743,384.56836,431.15935Q321.27286,468.59128,248.86371,472.84107Q176.45457,477.09086,148.84107,410.1135Q121.22757,343.13614,67.95457,296.56807Q14.68157,250,76.45485,209.5685Q138.22813,169.13699,166.2505,123.59142Q194.27286,78.04585,249.70464,79.81828Q305.13643,81.59072,362.47721,103.93179Q419.818,126.27286,410.81786,188.13643Q401.81772,250,424.84079,321.86371Z;M439.43806,316.51312Q432.44085,383.02623,370.39398,407.14258Q308.3471,431.25893,240.13979,459.78516Q171.93248,488.31139,132.30301,426.26451Q92.67355,364.21763,63.21484,307.10882Q33.75613,250,44.06194,178.90151Q54.36774,107.80301,118.67355,75.31613Q182.97935,42.82924,240.60882,72.66602Q298.23828,102.50279,368.10882,107.87054Q437.97935,113.23828,442.20731,181.61914Q446.43527,250,439.43806,316.51312Z;M428.88107,298.41731Q382.87896,346.83463,343.6411,381.94757Q304.40324,417.06052,249.73188,417.66327Q195.06052,418.26602,121.90324,407.33463Q48.74595,396.40324,42.90922,323.20162Q37.07249,250,50.04223,182.03624Q63.01197,114.07249,129.2076,98.49191Q195.40324,82.91133,251.0746,78.83673Q306.74595,74.76214,356.50598,105.64321Q406.26602,136.52427,440.5746,193.26214Q474.88318,250,428.88107,298.41731Z;M402.82336,294.74662Q372.52122,339.49324,339.45366,380.77461Q306.3861,422.05598,251.70463,416.9165Q197.02317,411.77702,159.66506,377.28619Q122.30695,342.79537,72.75579,296.39768Q23.20463,250,37.88851,178.24662Q52.57238,106.49324,117.0304,72.97924Q181.48842,39.46525,238.53957,73.79537Q295.59073,108.12549,332.49083,135.50917Q369.39092,162.89286,401.2582,206.44643Q433.12549,250,402.82336,294.74662Z;M437.48517,301.93698Q392.82947,353.87396,357.50371,413.21131Q322.17795,472.54867,247.51112,479.51159Q172.8443,486.47452,129.54819,427.64458Q86.25209,368.81464,81.57785,309.40732Q76.90361,250,83.86283,191.93327Q90.82205,133.86654,141.98146,104.152Q193.14087,74.43745,247.01483,83.88926Q300.88878,93.34106,355.51112,113.62234Q410.13346,133.90361,446.13717,191.95181Q482.14087,250,437.48517,301.93698Z"
+                  ></animate>
+                </path>
+                <path id="blob" fill="url(#gradient)" style="opacity: 0.1">
+                  <animate
+                    attributeName="d"
+                    dur="25s"
+                    repeatCount="indefinite"
+                    values="M469.34657,320.38487Q443.8468,390.76973,373.53877,402.1156Q303.23073,413.46147,238.88463,448.30757Q174.53853,483.15367,122.76833,431.6929Q70.99814,380.23213,76.84563,315.11607Q82.69313,250,78.9227,186.3071Q75.15227,122.6142,131.92223,91.73003Q188.6922,60.84587,253.2305,51.539Q317.7688,42.23213,359.5759,90.92433Q401.383,139.61653,448.11467,194.80827Q494.84633,250,469.34657,320.38487Z;M439.43806,316.51312Q432.44085,383.02623,370.39398,407.14258Q308.3471,431.25893,240.13979,459.78516Q171.93248,488.31139,132.30301,426.26451Q92.67355,364.21763,63.21484,307.10882Q33.75613,250,44.06194,178.90151Q54.36774,107.80301,118.67355,75.31613Q182.97935,42.82924,240.60882,72.66602Q298.23828,102.50279,368.10882,107.87054Q437.97935,113.23828,442.20731,181.61914Q446.43527,250,439.43806,316.51312Z;M424.84079,321.86371Q447.86386,393.72743,384.56836,431.15935Q321.27286,468.59128,248.86371,472.84107Q176.45457,477.09086,148.84107,410.1135Q121.22757,343.13614,67.95457,296.56807Q14.68157,250,76.45485,209.5685Q138.22813,169.13699,166.2505,123.59142Q194.27286,78.04585,249.70464,79.81828Q305.13643,81.59072,362.47721,103.93179Q419.818,126.27286,410.81786,188.13643Q401.81772,250,424.84079,321.86371Z;M423.38828,307.00416Q406.39243,364.00831,353.55217,384.57202Q300.71191,405.13573,242.06787,430.50416Q183.42382,455.87258,116.5554,425.63666Q49.68697,395.40075,58.87581,322.70037Q68.06464,250,86.66067,197.31625Q105.2567,144.63251,148.86843,108.53648Q192.48015,72.44045,252.10019,66.13989Q311.72022,59.83933,378.54063,84.21929Q445.36105,108.59925,442.87258,179.29963Q440.38412,250,423.38828,307.00416Z;M460.19079,314.81752Q429.48296,379.63503,366.74655,397.33779Q304.01014,415.04055,238.62673,450.6401Q173.24331,486.23965,141.80231,418.853Q110.3613,351.46635,87.51337,300.73317Q64.66545,250,86.56406,198.80231Q108.46268,147.60462,149.75669,107.39355Q191.05069,67.18248,258.9189,40.41566Q326.7871,13.64883,381.21107,64.45621Q435.63503,115.26359,463.26683,182.63179Q490.89862,250,460.19079,314.81752Z;M437.48517,301.93698Q392.82947,353.87396,357.50371,413.21131Q322.17795,472.54867,247.51112,479.51159Q172.8443,486.47452,129.54819,427.64458Q86.25209,368.81464,81.57785,309.40732Q76.90361,250,83.86283,191.93327Q90.82205,133.86654,141.98146,104.152Q193.14087,74.43745,247.01483,83.88926Q300.88878,93.34106,355.51112,113.62234Q410.13346,133.90361,446.13717,191.95181Q482.14087,250,437.48517,301.93698Z;M469.34657,320.38487Q443.8468,390.76973,373.53877,402.1156Q303.23073,413.46147,238.88463,448.30757Q174.53853,483.15367,122.76833,431.6929Q70.99814,380.23213,76.84563,315.11607Q82.69313,250,78.9227,186.3071Q75.15227,122.6142,131.92223,91.73003Q188.6922,60.84587,253.2305,51.539Q317.7688,42.23213,359.5759,90.92433Q401.383,139.61653,448.11467,194.80827Q494.84633,250,469.34657,320.38487Z"
+                  ></animate>
+                </path>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="gap-4 px-2 pt-1 md:flex md:px-4">
+          <div
+            class="mb-4 rounded-md bg-woman1 px-6 py-10 dark:bg-darkgreen md:h-full md:w-1/2"
+          >
+            <p class="sm:text-md mb-6 text-teal-700 dark:text-neutral-400">
+              <span
+                class="mb-4 block text-xl font-semibold text-secondary dark:text-white"
+                >A Data and Image Affair</span
+              >
+              As a data analyst, I have skills in collecting, analyzing, and
+              interpreting data to uncover fascinating patterns, trends, and
+              valuable insights that can be used for informative and strategic
+              decision-making. I thoroughly enjoy seeing data as an intriguing
+              puzzle, meticulously finding captivating stories behind the
+              numbers, and passionately discovering meaningful connections.
+            </p>
+            <div
+              class="overflow-hidden rounded-md transition duration-500 ease-in-out hover:scale-[0.99] hover:shadow-xl hover:shadow-neutral-300 dark:hover:shadow-black/50"
+            >
+              <img
+                src="../dist/img/p2.jpg"
+                alt="data 1"
+                class="mx-auto h-56 w-full object-cover object-center transition duration-500 ease-in-out hover:-rotate-12 hover:scale-150 md:h-72"
+              />
+            </div>
+          </div>
+          <div
+            class="rounded-md bg-woman1 px-6 py-10 dark:bg-darkgreen md:h-full md:w-1/2"
+          >
+            <p class="sm:text-md mb-6 text-teal-700 dark:text-neutral-400">
+              <span
+                class="mb-4 block text-xl font-semibold text-secondary dark:text-white"
+                >The Visual Magic</span
+              >
+              As a freelance photographer, I love the process of capturing
+              moments with my camera and expressing beauty within frames. I
+              enjoy exploring new perspectives, searching for perfect lighting,
+              and conveying stories through visual medium. Photography, for me,
+              is a way to preserve moments, express emotions, and share
+              experiences with others.
+            </p>
+            <div
+              class="group overflow-hidden rounded-md transition duration-500 ease-in-out hover:scale-[0.99] hover:shadow-xl hover:shadow-neutral-300 dark:hover:shadow-black/50"
+            >
+              <img
+                src="../dist/img/p3.jpg"
+                alt="data 1"
+                class="mx-auto h-56 w-full object-cover object-center transition duration-500 ease-in-out hover:rotate-12 hover:scale-150 md:h-72"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="justify-evenly gap-4 px-2 py-10 md:px-4 lg:flex">
+          <div
+            class="mb-4 flex-1 rounded-md bg-white px-6 py-10 shadow-md dark:border-2 dark:border-teal-900 dark:bg-black lg:w-1/3"
+          >
+            <p class="text-teal-700 dark:text-neutral-300">
+              <span
+                class="mb-4 block text-xl font-semibold text-secondary dark:text-teal-500"
+                >Unity in Fusion</span
+              >In my work, I combine both these skills, merging strong analytics
+              with visual aesthetics to create impactful work. I integrate
+              data-driven insights with creative use of composition, color, and
+              visual communication. Through this fusion, I strive to reveal
+              stories, enlighten information, and make a positive impact in the
+              world of information technology and photography.
+            </p>
+          </div>
+          <div
+            class="mb-4 flex-1 rounded-md bg-white px-6 py-10 shadow-md dark:border-2 dark:border-teal-900 dark:bg-black lg:w-1/3"
+          >
+            <p class="text-teal-700 dark:text-neutral-300">
+              <span
+                class="mb-4 block text-xl font-semibold text-secondary dark:text-teal-500"
+                >Vision and Goals</span
+              >I am committed to continuous learning, growth, and innovation in
+              both fields. Through this website, I aim to share my work,
+              experiences, and knowledge with the world. I hope to engage in
+              challenging projects, collaborate with creative individuals, and
+              create captivating and meaningful outcomes.
+            </p>
+          </div>
+          <div
+            class="relative mb-4 shrink-0 overflow-hidden rounded-md bg-teal-50 px-6 py-10 shadow-md dark:bg-teal-950 md:order-1 lg:w-2/5"
+          >
+            <p class="text-lg text-teal-700 dark:text-teal-500">
+              <span
+                class="mb-4 block text-3xl font-semibold text-secondary dark:text-teal-300"
+                >Stay Connected!</span
+              >Thank you for visiting my website! If you are interested in
+              collaborating, have any questions, or want to learn more about my
+              work, please feel free to contact me through the provided contact
+              information on this site. I am excited to share experiences and
+              answer your inquiries.
+            </p>
+            <a href="https://www.instagram.com/indriyaaaani/" target="_blank"
+              ><box-icon
+                type="logo"
+                name="instagram"
+                class="mr-2 mt-8 h-12 w-12 rounded-full border-2 border-secondary fill-secondary p-2 transition duration-300 ease-in-out hover:scale-110 hover:border-white hover:bg-gradient-to-tr hover:from-[#FFD954] hover:via-[#DA1984] hover:to-[#3D55DD] hover:fill-white hover:outline hover:outline-pink-700 dark:border-white dark:fill-white"
+              ></box-icon
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/indriyani-4b15b9209"
+              target="_blank"
+              ><box-icon
+                type="logo"
+                name="linkedin"
+                class="mr-2 mt-8 h-12 w-12 rounded-full border-2 border-secondary fill-secondary p-2 transition duration-300 ease-in-out hover:scale-110 hover:border-white hover:bg-sky-600 hover:fill-white hover:outline hover:outline-sky-600 dark:border-white dark:fill-white"
+              ></box-icon
+            ></a>
+            <a
+              href="https://www.tiktok.com/@indriyanidriya?_t=8cooRa2SWro&_r=1"
+              target="_blank"
+              ><box-icon
+                type="logo"
+                name="tiktok"
+                class="mr-2 mt-8 h-12 w-12 rounded-full border-2 border-secondary fill-secondary p-2 transition duration-300 ease-in-out hover:scale-110 hover:border-white hover:bg-black hover:fill-white hover:outline hover:outline-rose-500 dark:border-white dark:fill-white"
+              ></box-icon
+            ></a>
+            <p class="mt-8 text-2xl font-medium text-secondary dark:text-white">
+              Stay in touch and follow me on my Social Media!
+            </p>
+            <span class="absolute -bottom-10 right-0 -z-10">
+              <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 500 500"
+                width="100%"
+                id="blobSvg"
+                filter="blur(0px)"
+                style="opacity: 0.6"
+                transform="rotate(0) scale(2)"
+              >
+                <defs>
+                  <linearGradient
+                    id="gradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="0%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" style="stop-color: rgb(0, 71, 62)"></stop>
+                    <stop
+                      offset="100%"
+                      style="stop-color: rgb(0, 71, 62)"
+                    ></stop>
+                  </linearGradient>
+                </defs>
+                <path id="blob" fill="url(#gradient)" style="opacity: 0.1">
+                  <animate
+                    attributeName="d"
+                    dur="25s"
+                    repeatCount="indefinite"
+                    values="M414.53769,321.38989Q420.37096,392.77979,350.00938,405.59743Q279.64779,418.41507,213.62261,422.99375Q147.59743,427.57242,94.94338,376.434Q42.28934,325.29559,42.19191,249.67298Q42.09448,174.05036,91.48437,117.78308Q140.87426,61.5158,214.61636,47.15422Q288.35846,32.79263,348.05974,75.5158Q407.76103,118.23897,408.23272,184.11949Q408.70441,250,414.53769,321.38989Z;M404.21696,312.89783Q400.5999,375.79567,344.18719,420.60848Q287.77447,465.42129,222.25959,438.51488Q156.7447,411.60848,114.36806,363.06382Q71.99143,314.51917,65.98083,247.80853Q59.97023,181.09788,105.72982,130.10217Q151.4894,79.10645,216.18088,77.25959Q280.87235,75.41272,335.88295,103.82341Q390.89355,132.2341,399.36378,191.11705Q407.83401,250,404.21696,312.89783Z;M428.39652,310.63781Q395.12039,371.27562,337.58607,396.3189Q280.05174,421.36219,204.00896,441.94775Q127.96619,462.5333,107.32787,385.81839Q86.68955,309.10348,96.33581,253.18955Q105.98207,197.27562,134.68904,148.26665Q163.396,99.25769,224.43929,74.05174Q285.48258,48.8458,334.83632,93.40548Q384.19006,137.96516,422.93135,193.98258Q461.67264,250,428.39652,310.63781Z;M429,328Q437,406,362,433Q287,460,218,442Q149,424,122.5,365Q96,306,74.5,242Q53,178,94.5,115Q136,52,206.5,73Q277,94,347.5,101.5Q418,109,419.5,179.5Q421,250,429,328Z;M433.0232,309.9192Q393.01281,369.83841,338.3352,406.40881Q283.6576,442.97921,221.7752,424.49281Q159.8928,406.0064,119.2384,358.9864Q78.584,311.9664,70.5304,246.7752Q62.4768,181.584,97.7552,114.4464Q133.0336,47.3088,206.208,64.61119Q279.3824,81.91359,342.208,100.8192Q405.0336,119.7248,439.0336,184.8624Q473.0336,250,433.0232,309.9192Z;M414.53769,321.38989Q420.37096,392.77979,350.00938,405.59743Q279.64779,418.41507,213.62261,422.99375Q147.59743,427.57242,94.94338,376.434Q42.28934,325.29559,42.19191,249.67298Q42.09448,174.05036,91.48437,117.78308Q140.87426,61.5158,214.61636,47.15422Q288.35846,32.79263,348.05974,75.5158Q407.76103,118.23897,408.23272,184.11949Q408.70441,250,414.53769,321.38989Z"
+                  ></animate>
+                </path>
+                <path id="blob" fill="url(#gradient)" style="opacity: 0.1">
+                  <animate
+                    attributeName="d"
+                    dur="25s"
+                    repeatCount="indefinite"
+                    values="M443.46373,322.92581Q424.06453,395.85162,352.29275,408.54192Q280.52096,421.23222,209.43547,432.55323Q138.34998,443.87423,108.93547,378.01696Q79.52096,312.15968,50.50966,239.62741Q21.49835,167.09515,80.22256,112.52096Q138.94677,57.94677,211.78709,57.03792Q284.62741,56.12906,342.97339,89.43146Q401.31936,122.73387,432.09114,186.36693Q462.86293,250,443.46373,322.92581Z;M419.06254,317.79517Q411.11118,385.59033,349.66843,425.59894Q288.22568,465.60755,228.34547,428.45831Q168.46526,391.30906,120.24124,353.19622Q72.01722,315.08338,69.86103,249.40801Q67.70483,183.73263,103.47221,120.73263Q139.23958,57.73263,215.36631,36.75347Q291.49305,15.77432,346.41495,69.35242Q401.33686,122.93051,414.17538,186.46526Q427.0139,250,419.06254,317.79517Z;M425.57934,323.79599Q426.22734,397.59197,355.10104,419.41516Q283.97474,441.23834,222.29242,423.00907Q160.6101,404.77979,95.49644,367.33031Q30.38277,329.88083,44.58128,255.13536Q58.77979,180.3899,99.7419,120.41159Q140.70401,60.43329,214.57221,45.49287Q288.44042,30.55246,350.61367,72.29792Q412.78692,114.04339,418.85914,182.0217Q424.93135,250,425.57934,323.79599Z;M428.39652,310.63781Q395.12039,371.27562,337.58607,396.3189Q280.05174,421.36219,204.00896,441.94775Q127.96619,462.5333,107.32787,385.81839Q86.68955,309.10348,96.33581,253.18955Q105.98207,197.27562,134.68904,148.26665Q163.396,99.25769,224.43929,74.05174Q285.48258,48.8458,334.83632,93.40548Q384.19006,137.96516,422.93135,193.98258Q461.67264,250,428.39652,310.63781Z;M433.0232,309.9192Q393.01281,369.83841,338.3352,406.40881Q283.6576,442.97921,221.7752,424.49281Q159.8928,406.0064,119.2384,358.9864Q78.584,311.9664,70.5304,246.7752Q62.4768,181.584,97.7552,114.4464Q133.0336,47.3088,206.208,64.61119Q279.3824,81.91359,342.208,100.8192Q405.0336,119.7248,439.0336,184.8624Q473.0336,250,433.0232,309.9192Z;M443.46373,322.92581Q424.06453,395.85162,352.29275,408.54192Q280.52096,421.23222,209.43547,432.55323Q138.34998,443.87423,108.93547,378.01696Q79.52096,312.15968,50.50966,239.62741Q21.49835,167.09515,80.22256,112.52096Q138.94677,57.94677,211.78709,57.03792Q284.62741,56.12906,342.97339,89.43146Q401.31936,122.73387,432.09114,186.36693Q462.86293,250,443.46373,322.92581Z"
+                  ></animate>
+                </path>
+                <path id="blob" fill="url(#gradient)" style="opacity: 0.1">
+                  <animate
+                    attributeName="d"
+                    dur="25s"
+                    repeatCount="indefinite"
+                    values="M429,328Q437,406,362,433Q287,460,218,442Q149,424,122.5,365Q96,306,74.5,242Q53,178,94.5,115Q136,52,206.5,73Q277,94,347.5,101.5Q418,109,419.5,179.5Q421,250,429,328Z;M428.39652,310.63781Q395.12039,371.27562,337.58607,396.3189Q280.05174,421.36219,204.00896,441.94775Q127.96619,462.5333,107.32787,385.81839Q86.68955,309.10348,96.33581,253.18955Q105.98207,197.27562,134.68904,148.26665Q163.396,99.25769,224.43929,74.05174Q285.48258,48.8458,334.83632,93.40548Q384.19006,137.96516,422.93135,193.98258Q461.67264,250,428.39652,310.63781Z;M433.0232,309.9192Q393.01281,369.83841,338.3352,406.40881Q283.6576,442.97921,221.7752,424.49281Q159.8928,406.0064,119.2384,358.9864Q78.584,311.9664,70.5304,246.7752Q62.4768,181.584,97.7552,114.4464Q133.0336,47.3088,206.208,64.61119Q279.3824,81.91359,342.208,100.8192Q405.0336,119.7248,439.0336,184.8624Q473.0336,250,433.0232,309.9192Z;M425.57934,323.79599Q426.22734,397.59197,355.10104,419.41516Q283.97474,441.23834,222.29242,423.00907Q160.6101,404.77979,95.49644,367.33031Q30.38277,329.88083,44.58128,255.13536Q58.77979,180.3899,99.7419,120.41159Q140.70401,60.43329,214.57221,45.49287Q288.44042,30.55246,350.61367,72.29792Q412.78692,114.04339,418.85914,182.0217Q424.93135,250,425.57934,323.79599Z;M404.21696,312.89783Q400.5999,375.79567,344.18719,420.60848Q287.77447,465.42129,222.25959,438.51488Q156.7447,411.60848,114.36806,363.06382Q71.99143,314.51917,65.98083,247.80853Q59.97023,181.09788,105.72982,130.10217Q151.4894,79.10645,216.18088,77.25959Q280.87235,75.41272,335.88295,103.82341Q390.89355,132.2341,399.36378,191.11705Q407.83401,250,404.21696,312.89783Z;M429,328Q437,406,362,433Q287,460,218,442Q149,424,122.5,365Q96,306,74.5,242Q53,178,94.5,115Q136,52,206.5,73Q277,94,347.5,101.5Q418,109,419.5,179.5Q421,250,429,328Z"
+                  ></animate>
+                </path>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+    <!-- Portfolio Section Start -->
+    <section
+      id="portfolio"
+      class="relative min-h-full bg-secondary pb-20 pt-36 selection:bg-teal-700 selection:text-white dark:bg-dark dark:selection:bg-teal-300 dark:selection:text-dark"
+    >
+      <div
+        class="container absolute -top-24 left-1/2 -translate-x-1/2 px-2 md:-top-20 md:px-4"
+      >
+        <div class="px-4 text-center lg:text-left">
+          <div
+            class="rounded-md bg-woman2 px-6 py-10 shadow-2xl dark:bg-darkgreen dark:shadow-teal-400/20 md:px-6"
+          >
+            <h2
+              class="mb-3 text-xl font-semibold text-secondary dark:text-white md:mb-2 md:text-3xl"
+            >
+              Unleashing Creativity and Data-Driven Solutions
+            </h2>
+            <h4 class="text-base text-teal-700 dark:text-neutral-400">
+              Blending the Art of Photography with the Science of Data Analytics
+            </h4>
+          </div>
+        </div>
+        <span
+          class="absolute -top-64 right-14 hidden cursor-none transition duration-[8s] ease-in-out hover:-translate-x-32 hover:-rotate-[360deg] hover:scale-110 lg:flex"
+        >
+          <img
+            src="../dist/img/red.png"
+            alt="red ring"
+            class="w-[428px] animate-myAnim drop-shadow-2xl"
+          />
+        </span>
+      </div>
+      <div class="container mt-10">
+        <div class="text-center">
+          <h4 class="text-lg font-medium text-white lg:text-2xl">
+            <span class="mb-3 block text-2xl font-semibold lg:mb-4 lg:text-4xl"
+              >Igniting Change</span
+            >Introducing Our Latest Project Endeavor
+          </h4>
+        </div>
+      </div>
+      <div class="container">
+        <div class="mt-6 px-2 py-4 lg:px-4">
+          <div
+            class="block w-full gap-6 rounded-md bg-white dark:bg-black dark:drop-shadow-[5px_5px_50px_rgba(20,184,166,0.3)] md:flex md:p-6"
+          >
+            <div
+              class="mb-1 overflow-hidden rounded-t-md shadow-xl md:mb-0 md:w-1/2"
+            >
+              <img
+                src="../dist/img/project/project-1.jpg"
+                alt="Unlocking the Impact of Organizational Experience on Workforce"
+                class="h-full object-cover object-center"
+              />
+            </div>
+            <div class="mb-6 px-6 pb-6 pt-4 md:mb-0 md:w-1/2 md:px-4 md:py-4">
+              <h2
+                class="mb-2 text-lg font-semibold text-secondary dark:text-white md:text-xl lg:mb-4 lg:text-3xl"
+              >
+                Unlocking the Impact of Organizational Experience on Workforce
+              </h2>
+              <h4
+                class="mb-8 text-sm font-light text-teal-600 md:mb-4 lg:mb-4 lg:text-base"
+              >
+                Productivity: A Study on 2018 Graduates of FMIPA UNISBA
+              </h4>
+              <p
+                class="hidden text-secondary dark:text-neutral-400 md:mb-8 md:block md:text-base lg:text-base"
+              >
+                This research aims to analyze the influence of organizational
+                experience on workforce productivity among 2018 graduates of
+                FMIPA UNISBA. In this study, I collected data related to
+                organizational experience and measured the level of workforce
+                productivity through relevant indicators.
+                <span class="md:hidden lg:mt-4 lg:block">
+                  I conducted statistical analysis and employed quantitative
+                  research methods to identify the relationship between
+                  organizational experience and productivity.
+                </span>
+              </p>
+              <a
+                href="work/work.html"
+                class="rounded-md bg-secondary px-4 py-2 text-teal-100 transition duration-300 ease-in-out hover:bg-teal-800 hover:text-teal-50 dark:hover:shadow-lg dark:hover:shadow-teal-800/60 lg:px-5 lg:py-3"
+                >read more</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mb-4">
+        <div class="py6 px-4">
+          <div class="px-4 py-6 text-center">
+            <h2
+              class="mb-4 text-xl font-medium text-teal-50 md:mb-3 lg:text-2xl"
+            >
+              Unveiling a World of Extraordinary Projects
+            </h2>
+            <p class="text-base font-light text-neutral-400">
+              Where Creativity Knows No Bounds, Experience the Epitome of
+              Excellence
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="flex justify-center md:mt-3">
+          <div
+            class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-9"
+          >
+            <div
+              class="group relative cursor-pointer items-center justify-center overflow-hidden rounded-md transition-shadow hover:shadow-xl hover:shadow-black/30"
+            >
+              <div class="h-96 w-72">
+                <img
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                  src="../dist/img/project/starbuck1.jpg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"
+              ></div>
+              <div
+                class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0"
+              >
+                <h1 class="mb-5 text-xl font-bold text-white">
+                  Capturing the Essence of Starbucks
+                </h1>
+                <p
+                  class="mb-3 text-lg text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  Through the Lens: Exploring Starbucks' Story, One Frame at a
+                  Time
+                </p>
+                <button
+                  class="font-com rounded-full bg-secondary px-3.5 py-2 text-sm capitalize text-white shadow shadow-black/60"
+                >
+                  See More
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="group relative cursor-pointer items-center justify-center overflow-hidden rounded-md transition-shadow hover:shadow-xl hover:shadow-black/30"
+            >
+              <div class="h-96 w-72">
+                <img
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                  src="../dist/img/project/project4.jpg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"
+              ></div>
+              <div
+                class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0"
+              >
+                <h1 class="mb-5 text-xl font-bold text-white">
+                  Unveiling Target Markets
+                </h1>
+                <p
+                  class="mb-3 text-lg text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  Insights Unlocked: Empowering Effective Strategic
+                  Decision-Making
+                </p>
+                <button
+                  class="font-com rounded-full bg-secondary px-3.5 py-2 text-sm capitalize text-white shadow shadow-black/60"
+                >
+                  See More
+                </button>
+              </div>
+            </div>
+            <div
+              class="group relative cursor-pointer items-center justify-center overflow-hidden rounded-md transition-shadow hover:shadow-xl hover:shadow-black/30"
+            >
+              <div class="h-96 w-72">
+                <img
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                  src="../dist/img/project/project3.jpg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"
+              ></div>
+              <div
+                class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0"
+              >
+                <h1 class="mb-5 text-xl font-bold text-white">
+                  Architectural Splendors
+                </h1>
+                <p
+                  class="mb-3 text-lg text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  Discover the Beauty That Soars Above the Cityscape
+                </p>
+                <button
+                  class="font-com rounded-full bg-secondary px-3.5 py-2 text-sm capitalize text-white shadow shadow-black/60"
+                >
+                  See More
+                </button>
+              </div>
+            </div>
+            <div
+              class="group relative cursor-pointer items-center justify-center overflow-hidden rounded-md transition-shadow hover:shadow-xl hover:shadow-black/30"
+            >
+              <div class="h-96 w-72">
+                <img
+                  class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                  src="../dist/img/project/project5.jpg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"
+              ></div>
+              <div
+                class="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0"
+              >
+                <h1 class="mb-5 text-xl font-bold text-white">
+                  Predicting Revenue Growth
+                </h1>
+                <p
+                  class="mb-3 text-lg text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                >
+                  Empower Sales Strategies that Rely on Data for Business
+                  Success
+                </p>
+                <button
+                  class="font-com rounded-full bg-secondary px-3.5 py-2 text-sm capitalize text-white shadow shadow-black/60"
+                >
+                  See More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="my-16 text-center">
+          <a
+            href="work/work.html"
+            class="rounded-lg bg-tertiary px-6 py-4 text-white transition duration-300 hover:shadow-lg hover:shadow-tertiary/50 dark:bg-teal-800 dark:hover:shadow-teal-800/60"
+            >Read More Work</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio Section End -->
+    <!-- Client Start -->
+    <section
+      id="client"
+      class="bg-neutral-950 selection:bg-teal-700 selection:text-white dark:bg-dark dark:selection:bg-teal-300 dark:selection:text-dark"
+    >
+      <div class="container px-4 py-16 sm:px-8 sm:py-24">
+        <div
+          class="grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16"
+        >
+          <div class="max-w-xl text-center sm:text-left">
+            <h2
+              class="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            >
+              Experience the Voice of our Delighted Customers...
+              <br class="hidden sm:block lg:hidden" />
+              Discover Their Stories!
+            </h2>
+
+            <p class="mt-4 text-gray-500">
+              Explore the Transformative Experiences Shared by Our Valued
+              Customers and Uncover the Power of Our Services!
+            </p>
+
+            <div class="hidden lg:mt-8 lg:flex lg:gap-4">
+              <button
+                class="prev-button rounded-full border border-teal-500 p-3 text-teal-500 hover:bg-teal-500 hover:text-white"
+              >
+                <span class="sr-only">Previous Slide</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="h-5 w-5 rtl:rotate-180"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 19.5L8.25 12l7.5-7.5"
+                  />
+                </svg>
+              </button>
+
+              <button
+                class="next-button rounded-full border border-teal-500 p-3 text-teal-500 hover:bg-teal-500 hover:text-white"
+              >
+                <span class="sr-only">Next Slide</span>
+                <svg
+                  class="h-5 w-5 rtl:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 5l7 7-7 7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="-mx-6 lg:col-span-2 lg:mx-0">
+            <div class="swiper-container !overflow-hidden">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <blockquote
+                    class="flex h-full flex-col justify-between bg-white p-12 dark:bg-teal-950"
+                  >
+                    <div>
+                      <div class="flex gap-0.5 text-green-500">
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </div>
+
+                      <div class="mt-4">
+                        <p
+                          class="text-2xl font-bold text-teal-600 dark:text-teal-300 sm:text-3xl"
+                        >
+                          Good work!
+                        </p>
+
+                        <p
+                          class="mt-4 leading-relaxed text-teal-800 dark:text-teal-500"
+                        >
+                          I am extremely satisfied with the photography services
+                          provided. The results are outstanding and meet my
+                          expectations. I hope to work together more in the
+                          future
+                        </p>
+                      </div>
+                    </div>
+
+                    <footer class="mt-8 text-sm text-teal-500">
+                      &mdash; Rani Wijaya
+                    </footer>
+                  </blockquote>
+                </div>
+
+                <div class="swiper-slide">
+                  <blockquote
+                    class="flex h-full flex-col justify-between bg-white p-12 dark:bg-teal-950"
+                  >
+                    <div>
+                      <div class="flex gap-0.5 text-green-500">
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </div>
+
+                      <div class="mt-4">
+                        <p
+                          class="text-2xl font-bold text-teal-600 dark:text-teal-300 sm:text-3xl"
+                        >
+                          Great job!
+                        </p>
+
+                        <p
+                          class="mt-4 leading-relaxed text-teal-800 dark:text-teal-500"
+                        >
+                          The data analytics team is highly professional and
+                          helped us analyze complex data. The solutions and
+                          insights provided were valuable to our business.
+                        </p>
+                      </div>
+                    </div>
+
+                    <footer class="mt-8 text-sm text-teal-500">
+                      &mdash; Budi Susanto
+                    </footer>
+                  </blockquote>
+                </div>
+
+                <div class="swiper-slide">
+                  <blockquote
+                    class="flex h-full flex-col justify-between bg-white p-12 dark:bg-teal-950"
+                  >
+                    <div>
+                      <div class="flex gap-0.5 text-green-500">
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </div>
+
+                      <div class="mt-4">
+                        <p
+                          class="text-2xl font-bold text-teal-600 dark:text-teal-300 sm:text-3xl"
+                        >
+                          Well done!
+                        </p>
+
+                        <p
+                          class="mt-4 leading-relaxed text-teal-800 dark:text-teal-500"
+                        >
+                          The photographers are talented and creative. They
+                          captured beautiful moments and produced stunning
+                          photos. I am extremely pleased with the results!
+                        </p>
+                      </div>
+                    </div>
+
+                    <footer class="mt-8 text-sm text-teal-500">
+                      &mdash; Maya Putri
+                    </footer>
+                  </blockquote>
+                </div>
+                <div class="swiper-slide">
+                  <blockquote
+                    class="flex h-full flex-col justify-between bg-white p-12 dark:bg-teal-950"
+                  >
+                    <div>
+                      <div class="flex gap-0.5 text-green-500">
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+
+                        <svg
+                          class="h-5 w-5"
+                          fill="gold"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </div>
+
+                      <div class="mt-4">
+                        <p
+                          class="text-2xl font-bold text-teal-600 dark:text-teal-300 sm:text-3xl"
+                        >
+                          Excellent job!
+                        </p>
+
+                        <p
+                          class="mt-4 leading-relaxed text-teal-800 dark:text-teal-500"
+                        >
+                          Exceptional data analytics service. They helped us
+                          uncover insights from our business data and provided
+                          highly valuable recommendations. Thank you!
+                        </p>
+                      </div>
+                    </div>
+
+                    <footer class="mt-8 text-sm text-teal-500">
+                      &mdash; Andre Tjandra
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex justify-center gap-4 lg:hidden">
+          <button
+            aria-label="Previous slide"
+            class="prev-button rounded-full border border-teal-500 p-4 text-teal-500 hover:bg-teal-500 hover:text-white"
+          >
+            <svg
+              class="h-5 w-5 -rotate-180 transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 5l7 7-7 7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+
+          <button
+            aria-label="Next slide"
+            class="next-button rounded-full border border-teal-500 p-4 text-teal-500 hover:bg-teal-500 hover:text-white"
+          >
+            <svg
+              class="h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 5l7 7-7 7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="mt-20 w-full rounded-lg bg-neutral-200 px-4 py-8 dark:bg-white lg:py-10"
+        >
+          <div class="flex flex-wrap items-center justify-center">
+            <a
+              href="https://bankmandiri.co.id/"
+              target="_blank"
+              class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+              ><img
+                src="../dist/img/client/Bank_Mandiri_logo_2016.svg"
+                alt="Mandiri Bank"
+            /></a>
+            <a
+              href="https://www.tokopedia.com/"
+              target="_blank"
+              class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+              ><img src="../dist/img/client/Tokopedia.svg" alt="Tokopedia"
+            /></a>
+            <a
+              href="https://www.logitech.com/id-id"
+              target="_blank"
+              class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+              ><img src="../dist/img/client/logi.png" alt="Logitech_logo"
+            /></a>
+            <a
+              href="https://global.canon/en/"
+              target="_blank"
+              class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+              ><img
+                src="../dist/img/client/Canon_wordmark.svg"
+                alt="Canon_wordmark"
+            /></a>
+            <a
+              href="https://shopee.co.id/"
+              target="_blank"
+              class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+              ><img src="../dist/img/client/Shopee.svg" alt="Shopee"
+            /></a>
+            <a
+              href="https://www.amazon.com/"
+              target="_blank"
+              class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
+              ><img src="../dist/img/client/Amazon_logo.svg" alt="Amazon_logo"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Client End -->
+    <!-- Blog Section Start -->
+    <section
+      id="blog"
+      class="bg-woman2 bg-opacity-30 pb-9 pt-36 selection:bg-teal-700 selection:text-white dark:bg-dark dark:selection:bg-teal-300 dark:selection:text-dark"
+    >
+      <div class="container lg:px-8">
+        <div class="-w-full">
+          <h4 class="text-2xl font-semibold text-secondary dark:text-white">
+            See my blog
+          </h4>
+          <h2 class="mb-12 text-teal-600 dark:text-neutral-400">
+            Explore my insights and stay informed with my blog
+          </h2>
+        </div>
+        <div class="flex flex-wrap md:justify-center">
+          <div class="mb-6 w-full lg:mb-0 lg:w-1/2 lg:pr-4 xl:w-1/3">
+            <div
+              class="overflow-hidden rounded-md bg-white transition duration-300 hover:scale-105 hover:shadow-lg hover:shadow-woman2 dark:bg-black dark:shadow-transparent dark:hover:drop-shadow-[5px_5px_100px_rgba(20,184,166,0.2)] md:mb-6"
+            >
+              <img
+                src="../dist/img/blog/blog1.jpg"
+                alt="Photographer"
+                class="mx-auto h-52 w-full object-cover object-center transition duration-500 ease-in-out hover:scale-105 md:h-72"
+              />
+              <div class="px-6 py-8">
+                <h3>
+                  <a
+                    href="#"
+                    class="mb-4 block truncate text-lg font-medium text-secondary transition duration-300 hover:text-teal-800 dark:text-teal-500"
+                    >A Guide for Photographers</a
+                  >
+                </h3>
+                <p
+                  class="mb-6 line-clamp-3 text-base font-light text-neutral-500 dark:text-neutral-300"
+                >
+                  Discover the power of visual storytelling and how it can
+                  elevate your photography skills to new heights.
+                  <span class="block"
+                    >In this blog post, we delve into the techniques and
+                    strategies used by professional photographers to captivate
+                    audiences and evoke emotions through their images. Whether
+                    you're an aspiring photographer or a seasoned pro, this
+                    guide will provide valuable insights and inspiration to help
+                    you tell compelling visual stories.</span
+                  >
+                </p>
+                <a
+                  href="#"
+                  class="rounded-sm bg-tertiary px-4 py-2 text-sm text-white transition duration-300 hover:bg-opacity-80 hover:shadow-lg hover:shadow-tertiary/50"
+                  >Read more</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="mb-6 w-full lg:mb-0 lg:w-1/2 lg:pr-4 xl:w-1/3">
+            <div
+              class="overflow-hidden rounded-md bg-white transition duration-300 hover:scale-105 hover:shadow-lg hover:shadow-woman2 dark:bg-black dark:shadow-transparent dark:hover:drop-shadow-[5px_5px_100px_rgba(20,184,166,0.2)] md:mb-6"
+            >
+              <img
+                src="../dist/img/blog/blog2.jpg"
+                alt="Business"
+                class="mx-auto h-52 w-full object-cover object-center transition duration-500 ease-in-out hover:scale-105 md:h-72"
+              />
+              <div class="px-6 py-8">
+                <h3>
+                  <a
+                    href="#"
+                    class="mb-4 block truncate text-lg font-medium text-secondary transition duration-300 hover:text-teal-800 dark:text-teal-500"
+                    >The Key to Unlocking Business Growth</a
+                  >
+                </h3>
+                <p
+                  class="mb-6 line-clamp-3 text-base font-light text-neutral-500 dark:text-neutral-300"
+                >
+                  Explore the world of data analytics and its transformative
+                  impact on business growth.
+                  <span class="block"
+                    >In this blog post, we explore the importance of leveraging
+                    data to gain actionable insights, make informed decisions,
+                    and drive strategic initiatives. Learn about the latest
+                    trends, tools, and best practices in data analytics that can
+                    empower businesses to unlock their full potential and
+                    achieve sustainable growth.
+                  </span>
+                </p>
+                <a
+                  href="#"
+                  class="rounded-sm bg-tertiary px-4 py-2 text-sm text-white transition duration-300 hover:bg-opacity-80 hover:shadow-lg hover:shadow-tertiary/50"
+                  >Read more</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="mb-6 w-full lg:mb-0 lg:w-1/2 xl:w-1/3">
+            <div
+              class="overflow-hidden rounded-md bg-white transition duration-300 hover:scale-105 hover:shadow-lg hover:shadow-woman2 dark:bg-black dark:shadow-transparent dark:hover:drop-shadow-[5px_5px_100px_rgba(20,184,166,0.2)] md:mb-6"
+            >
+              <img
+                src="../dist/img/blog/blog3.jpg"
+                alt="Visual"
+                class="mx-auto h-52 w-full object-cover object-center transition duration-500 ease-in-out hover:scale-105 md:h-72"
+              />
+              <div class="px-6 py-8">
+                <h3>
+                  <a
+                    href="#"
+                    class="mb-4 block truncate text-lg font-medium text-secondary transition duration-300 hover:text-teal-800 dark:text-teal-500"
+                    >Creating Striking Visual Compositions</a
+                  >
+                </h3>
+                <p
+                  class="mb-6 line-clamp-3 text-base font-light text-neutral-500 dark:text-neutral-300"
+                >
+                  Unlock the secrets of creating visually stunning compositions
+                  in photography. In this blog post, we delve into the art and
+                  science behind composition techniques that can take your
+                  images from ordinary to extraordinary.
+                  <span class="block"
+                    >From rule of thirds to leading lines, we break down the
+                    fundamental principles and provide practical tips to help
+                    you compose striking and balanced photographs that leave a
+                    lasting impression.</span
+                  >
+                </p>
+                <a
+                  href="#"
+                  class="rounded-sm bg-tertiary px-4 py-2 text-sm text-white transition duration-300 hover:bg-opacity-80 hover:shadow-lg hover:shadow-tertiary/50"
+                  >Read more</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Blog Section End -->
+    <!-- Contact Section Start -->
+    <section
+      id="contact"
+      class="pb-32 pt-24 selection:bg-teal-700 selection:text-white dark:bg-dark dark:selection:bg-teal-300 dark:selection:text-dark"
+    >
+      <div class="container">
+        <div class="mb-10 w-full md:mb-24 md:px-4 md:text-center">
+          <h2
+            class="mb-2 text-xl font-medium text-secondary dark:text-white md:mb-1 lg:text-2xl"
+          >
+            Let's Connect and Bring Your Ideas to Life
+          </h2>
+          <p class="text-base font-light text-teal-500 dark:text-neutral-300">
+            "Reach out to me and let's turn your vision into reality"
+          </p>
+        </div>
+        <div class="lg:flex lg:gap-4">
+          <div class="mb-6 md:px-4 md:py-2 lg:mb-0 lg:w-1/3">
+            <h2
+              class="mb-8 text-3xl font-bold lowercase tracking-tight dark:text-white sm:text-5xl"
+            >
+              Tired of Waiting? Take the First Step and Connect with Me for
+              Instant Results!
+            </h2>
+            <p class="mt-4 text-gray-500 dark:text-neutral-300">
+              Let's connect and make magic happen! Fill out the form to get in
+              touch and let's turn your dreams into reality.
+            </p>
+          </div>
+          <form action="" class="lg:w-2/3" id="contact-form">
+            <div class="mb-6 w-full md:px-4">
+              <label
+                for="name"
+                class="text-base font-medium text-secondary dark:text-white"
+                >Name<span class="text-tertiary">*</span></label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your full name"
+                autocomplete="off"
+                class="w-full rounded-sm bg-neutral-300 p-3 text-secondary focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500 dark:border-2 dark:border-teal-900 dark:bg-neutral-950 dark:text-white dark:outline-2 dark:outline-teal-900 dark:focus:outline-0 dark:focus:drop-shadow-[5px_5px_50px_rgba(20,184,166,0.3)]"
+                required
+              />
+            </div>
+            <div class="mb-6 w-full md:px-4">
+              <label
+                for="email"
+                class="text-base font-medium text-secondary dark:text-white"
+                >Email<span class="text-tertiary">*</span></label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="off"
+                placeholder="brian.zalnando@example.com"
+                class="w-full rounded-sm bg-neutral-300 p-3 text-secondary focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500 dark:border-2 dark:border-teal-900 dark:bg-neutral-950 dark:text-white dark:outline-2 dark:outline-teal-900 dark:focus:outline-0 dark:focus:drop-shadow-[5px_5px_50px_rgba(20,184,166,0.3)]"
+                required
+              />
+            </div>
+            <div class="mb-4 w-full md:px-4">
+              <label
+                for="message"
+                class="text-base font-medium text-secondary dark:text-white"
+                >Message<span class="text-tertiary">*</span></label
+              >
+              <textarea
+                type="text"
+                id="message"
+                placeholder="Write your message"
+                class="h-32 w-full rounded-sm bg-neutral-300 p-3 text-secondary focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500 dark:border-2 dark:border-teal-900 dark:bg-neutral-950 dark:text-white dark:outline-2 dark:outline-teal-900 dark:focus:outline-0 dark:focus:drop-shadow-[5px_5px_50px_rgba(20,184,166,0.3)]"
+                required
+              ></textarea>
+            </div>
+            <div class="w-full md:px-4">
+              <button
+                class="w-full rounded-sm bg-tertiary px-8 py-2 text-base font-medium text-white transition duration-300 hover:bg-opacity-80 hover:shadow-lg hover:shadow-tertiary/50 dark:hover:bg-opacity-100 dark:hover:shadow-none dark:hover:drop-shadow-[5px_5px_50px_rgba(20,184,166,0.3)]"
+                type="submit"
+                onclick="SendMail()"
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <div
+      id="popup"
+      class="invisible fixed inset-0 z-50 flex items-center justify-center px-6 selection:bg-teal-700 selection:text-white dark:selection:bg-teal-300 dark:selection:text-dark"
+    >
+      <div class="relative rounded-lg bg-white p-4 shadow">
+        <div id="popup-content" class="text-center">
+          <h2 class="mb-2 text-2xl font-bold text-teal-500"></h2>
+          <p class="mb-4 text-lg"></p>
+          <span class="text-sm text-neutral-600"></span>
+        </div>
+        <div class="text-center">
+          <button
+            id="close-popup"
+            class="absolute -right-4 -top-9 mt-4 text-white"
+          >
+            <box-icon
+              type="solid"
+              name="x-circle"
+              class="h-11 w-11 rounded-full bg-white fill-tertiary"
+            ></box-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section End -->
+    <!-- Footer Section Start -->
+    <footer
+      class="bg-neutral-950 pb-12 pt-24 selection:bg-teal-700 selection:text-white dark:bg-dark dark:selection:bg-teal-300 dark:selection:text-dark"
+    >
+      <div class="container">
+        <div class="flex-wrap justify-center md:flex">
+          <div class="mb-6 px-4 text-white md:w-2/5 lg:w-2/4">
+            <h2 class="mb-2 text-xl font-light text-gray-300">Indriyani</h2>
+            <ul>
+              <li>
+                <a
+                  href="mailto:indriani.indri2239@gmail.com"
+                  target="_blank"
+                  class="footer-menu font-medium md:text-lg lg:text-2xl"
+                >
+                  indriani.indri2239@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.link/t4ikqt"
+                  target="_blank"
+                  class="footer-menu font-medium md:text-lg lg:text-2xl"
+                  >+62 813 1508 3032</a
+                >
+              </li>
+            </ul>
+
+            <h2
+              class="md:text-md mb-4 mt-10 font-light text-gray-300 lg:text-xl"
+            >
+              Connect
+            </h2>
+            <a href="https://www.instagram.com/indriyaaaani/" target="_blank"
+              ><box-icon
+                type="logo"
+                name="instagram"
+                class="mr-2 h-10 w-10 rounded-full border-2 border-white fill-white p-2 transition duration-300 ease-in-out hover:scale-110 hover:border-white hover:bg-gradient-to-tr hover:from-[#FFD954] hover:via-[#DA1984] hover:to-[#3D55DD] hover:fill-white hover:outline hover:outline-pink-700"
+              ></box-icon
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/indriyani-4b15b9209"
+              target="_blank"
+              ><box-icon
+                type="logo"
+                name="linkedin"
+                class="mr-2 h-10 w-10 rounded-full border-2 border-white fill-white p-2 transition duration-300 ease-in-out hover:scale-110 hover:border-white hover:bg-sky-600 hover:fill-white hover:outline hover:outline-sky-600"
+              ></box-icon
+            ></a>
+            <a
+              href="https://www.tiktok.com/@indriyanidriya?_t=8cooRa2SWro&_r=1"
+              target="_blank"
+              ><box-icon
+                type="logo"
+                name="tiktok"
+                class="mr-2 h-10 w-10 rounded-full border-2 border-white fill-white p-2 transition duration-300 ease-in-out hover:scale-110 hover:border-white hover:bg-black hover:fill-white hover:outline hover:outline-rose-500"
+              ></box-icon
+            ></a>
+          </div>
+          <div class="mb-6 px-4 text-white md:w-1/5 lg:w-1/4">
+            <h2 class="mb-2 text-xl font-light text-gray-300">Menu</h2>
+            <ul>
+              <li>
+                <a
+                  href="#home"
+                  class="footer-menu font-medium md:text-lg lg:text-2xl"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="footer-menu font-medium md:text-lg lg:text-2xl"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#portfolio"
+                  class="footer-menu font-medium md:text-lg lg:text-2xl"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#client"
+                  class="footer-menu font-medium md:text-lg lg:text-2xl"
+                  >Client</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#blog"
+                  class="footer-menu font-medium md:text-lg lg:text-2xl"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="footer-menu font-medium md:text-lg lg:text-2xl"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mb-6 px-4 text-white md:w-1/5 md:text-right lg:w-1/4">
+            <h2 class="mb-2 text-xl font-light text-gray-300">My Office</h2>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d247.58590026109854!2d107.5018510325084!3d-6.845640914916571!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNTAnNDQuMCJTIDEwN8KwMzAnMDYuNiJF!5e0!3m2!1sid!2sid!4v1685879157647!5m2!1sid!2sid"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="h-32 w-full md:float-right md:h-32 md:w-40 lg:h-48 lg:w-48"
+            ></iframe>
+          </div>
+        </div>
+        <hr class="h-px border-0 bg-gray-600 dark:bg-gray-700" />
+        <div class="mt-4 w-full text-center lg:px-4 lg:text-left">
+          <p class="text-sm font-extralight text-gray-300">
+            <a
+              href="https://www.instagram.com/indriyaaaani/"
+              target="_blank"
+              class="credit"
+              >©Indriyani. </a
+            >All Rights Reserved 2023.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+    <!-- Back to TOP start -->
+    <a
+      href="#home"
+      id="to-top"
+      class="group fixed bottom-6 right-6 z-[9999] hidden h-14 w-14 animate-myAnim rounded-full border-2 border-teal-500 bg-white/30 text-center backdrop-blur-sm transition-all duration-500 ease-in-out hover:border-white hover:bg-teal-500 dark:border-white dark:bg-teal-500/40 dark:hover:border-secondary dark:hover:bg-white"
+      ><box-icon
+        name="chevrons-up"
+        class="mt-[14px] fill-teal-500 group-hover:fill-white dark:fill-white dark:group-hover:fill-secondary"
+      ></box-icon
+    ></a>
+    <!-- Back to TOP end -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="../public/js/script.js"></script>
+  </body>
+</html>

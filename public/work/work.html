@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../dist/css/final.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- FONT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JAVASCRIPT -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- ICON -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="shortcut icon"
+      href="../../dist/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <title>My Work</title>
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Header Start-->
+    <header
+      class="absolute left-0 top-0 z-50 flex w-full items-center bg-transparent selection:bg-teal-700 selection:text-white dark:selection:bg-teal-300 dark:selection:text-dark"
+    >
+      <div class="container">
+        <div class="relative flex items-center justify-between py-6 lg:py-0">
+          <div class="px-4">
+            <a
+              href="../index.html"
+              class="block font-sans text-4xl font-bold text-secondary dark:text-teal-500 lg:hidden lg:py-0 lg:text-5xl"
+              >Portfolio</a
+            >
+          </div>
+          <button
+            id="hamburger"
+            name="hamburger"
+            type="button"
+            class="absolute right-4 block lg:hidden"
+          >
+            <span
+              class="hamburger-line origin-top-left transition duration-300 ease-in-out"
+            ></span>
+            <span
+              class="hamburger-line transition duration-300 ease-in-out"
+            ></span>
+            <span
+              class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"
+            ></span>
+          </button>
+          <nav
+            id="nav-menu"
+            class="absolute -bottom-32 right-4 hidden w-full max-w-[250px] rounded-lg bg-white shadow-lg dark:border-2 dark:border-teal-600 dark:bg-dark lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:border-none lg:dark:bg-transparent"
+          >
+            <ul
+              class="relative block py-6 lg:mx-auto lg:flex lg:justify-center"
+            >
+              <li class="group">
+                <a
+                  href="../index.html"
+                  class="link mx-8 flex px-2 py-2 text-base font-medium text-secondary transition-all duration-1000 hover:mix-blend-hard-light group-hover:text-teal-500 dark:text-white dark:hover:mix-blend-normal lg:dark:hover:mix-blend-normal"
+                  >Indriyani</a
+                >
+              </li>
+
+              <li class="mx-8 mt-3 flex items-center lg:mt-1">
+                <div class="flex">
+                  <span
+                    class="mr-2 text-sm text-secondary transition-all duration-1000 dark:text-white"
+                    ><span class="material-symbols-outlined">
+                      light_mode
+                    </span></span
+                  >
+                  <input type="checkbox" class="hidden" id="dark-toggle" />
+                  <label for="dark-toggle">
+                    <div
+                      class="flex h-6 w-10 cursor-pointer items-center rounded-full bg-secondary p-1 dark:bg-white"
+                    >
+                      <div
+                        class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out dark:bg-secondary"
+                      ></div>
+                    </div>
+                  </label>
+                  <span
+                    class="ml-2 text-sm text-secondary transition-all duration-1000 dark:text-white"
+                    ><span class="material-symbols-outlined">
+                      dark_mode
+                    </span></span
+                  >
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- Header End-->
+    <!-- Hero Start -->
+    <section
+      id="home"
+      class="min-h-screen pb-32 pt-36 selection:bg-teal-700 selection:text-white dark:bg-dark dark:selection:bg-teal-300 dark:selection:text-dark"
+    >
+      <div class="container">
+        <div class="lg:mt-16">
+          <div class="mb-20 w-full px-2 text-center md:px-4 lg:mb-0 lg:mt-24">
+            <div class="flex items-center justify-center p-10">
+              <div class="w-max">
+                <h1
+                  class="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-secondary pr-5 font-sans text-4xl font-bold text-secondary dark:border-r-white dark:text-teal-400 md:text-6xl lg:text-8xl"
+                >
+                  <a href="">Indriyani's</a> Work
+                </h1>
+              </div>
+            </div>
+            <h2
+              class="mb-3 mt-5 text-xl font-medium text-teal-600 dark:text-white lg:text-3xl"
+            >
+              Unveiling Stories through Analytics and Photography
+            </h2>
+            <p
+              class="mx-auto mb-10 text-sm font-medium leading-relaxed text-secondary opacity-80 dark:text-neutral-400 md:w-3/4"
+            >
+              Where Numbers Meet Visuals, Unleashing the Beauty and Insights of
+              the World - Indriyani's Work
+            </p>
+            <div class="flex items-center justify-center">
+              <div
+                class="group flex h-14 w-14 animate-myAnim cursor-pointer items-center justify-center rounded-full border-2 border-teal-400 bg-teal-700 text-center backdrop-blur-sm transition-all duration-500 ease-in-out hover:border-white hover:bg-teal-500 dark:border-white dark:bg-teal-500/40 dark:hover:border-secondary dark:hover:bg-white"
+              >
+                <box-icon
+                  name="chevrons-down"
+                  class="fill-white group-hover:fill-white dark:fill-white dark:group-hover:fill-secondary"
+                ></box-icon>
+              </div>
+            </div>
+            <p class="mt-2 text-xs text-secondary dark:text-neutral-400">
+              scroll to see my work
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero End -->
+    <!-- Content Start -->
+    <section
+      id="work"
+      class="selection:bg-teal-700 selection:text-white dark:bg-dark dark:selection:bg-teal-300 dark:selection:text-dark"
+    >
+      <div class="container">
+        <div class="pb-36 pt-96">
+          <div
+            class="block w-full gap-1 dark:drop-shadow-[5px_5px_100px_rgba(20,184,166,0.3)] md:flex md:p-6"
+          >
+            <div
+              class="mb-1 px-6 md:mb-0 md:w-1/2 md:px-2"
+              data-aos="fade-up-right"
+              data-aos-duration="1000"
+            >
+              <img
+                src="../../dist/img/project/project-1.jpg"
+                alt="Unlocking the Impact of Organizational Experience on Workforce"
+                class="h-full object-cover object-center"
+              />
+            </div>
+            <div
+              class="mb-6 px-6 pb-6 pt-4 md:mb-0 md:w-1/2 md:px-4 md:py-4"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <h2
+                class="mb-2 text-lg font-semibold text-secondary dark:text-white md:text-xl lg:mb-4 lg:text-3xl"
+              >
+                Unlocking the Impact of Organizational Experience on Workforce
+              </h2>
+              <h4
+                class="mb-8 text-sm font-light text-teal-600 md:mb-4 lg:mb-4 lg:text-base"
+                data-aos="fade-left"
+                data-aos-delay="100"
+                data-aos-duration="1000"
+              >
+                Productivity: A Study on 2018 Graduates of
+                <a
+                  href="https://admission.unisba.ac.id/fakultas-mipa/"
+                  class="customlink transition duration-300 hover:text-teal-300"
+                  >FMIPA UNISBA</a
+                >
+              </h4>
+              <p
+                class="hidden text-secondary dark:text-neutral-400 md:mb-8 md:block md:text-base lg:text-base"
+                data-aos="fade-left"
+                data-aos-delay="200"
+                data-aos-duration="1000"
+              >
+                This research aims to analyze the influence of organizational
+                experience on workforce productivity among 2018 graduates of
+                FMIPA UNISBA. In this study, I collected data related to
+                organizational experience and measured the level of workforce
+                productivity through relevant indicators.
+                <span class="md:hidden lg:mt-4 lg:block">
+                  I conducted statistical analysis and employed quantitative
+                  research methods to identify the relationship between
+                  organizational experience and productivity.
+                </span>
+              </p>
+              <a
+                href="unisba.html"
+                class="rounded-md bg-secondary px-4 py-2 text-teal-100 transition duration-300 ease-in-out hover:bg-teal-800 hover:text-teal-50 dark:hover:shadow-lg dark:hover:shadow-teal-800/60 lg:px-5 lg:py-3"
+                data-aos="fade-left"
+                data-aos-delay="300"
+                data-aos-duration="1000"
+                >read more</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="pb-36 pt-96">
+          <div
+            class="block w-full gap-1 dark:drop-shadow-[5px_5px_100px_rgba(20,184,166,0.3)] md:p-6"
+          >
+            <div
+              class="mb-1 px-6 md:mb-0 md:w-1/2 md:px-2"
+              data-aos="fade-up-right"
+              data-aos-duration="1000"
+            >
+              <img
+                src="../../dist/img/project/starbuck2.jpg"
+                alt="Unlocking the Impact of Organizational Experience on Workforce"
+                class="object-cover object-center md:float-left md:mr-6"
+              />
+            </div>
+            <div
+              class="mb-6 px-6 pb-6 pt-4 md:mb-0 md:px-4 md:py-4"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <h2
+                class="mb-2 text-lg font-semibold text-secondary dark:text-white md:text-xl lg:mb-4 lg:text-3xl"
+              >
+                Capturing the Essence of Starbucks
+              </h2>
+              <h4
+                class="mb-8 text-sm font-light text-teal-600 md:mb-4 lg:mb-4 lg:text-base"
+                data-aos="fade-left"
+                data-aos-delay="100"
+                data-aos-duration="1000"
+              >
+                Through the Lens: Exploring
+                <a
+                  href="https://www.starbucks.co.id/"
+                  class="customlink transition duration-300 hover:text-teal-300"
+                  >Starbucks'</a
+                >
+                Story, One Frame at a Time
+              </h4>
+              <p
+                class="hidden text-secondary dark:text-neutral-400 md:mb-8 md:block md:text-base lg:text-base"
+                data-aos="fade-left"
+                data-aos-delay="200"
+                data-aos-duration="1000"
+              >
+                Is an exciting visual journey that aims to delve deep into the
+                captivating story of Starbucks, one of the world's most renowned
+                coffeehouse chains. Through the lens of a camera, this project
+                seeks to explore and capture the essence of Starbucks,
+                showcasing its rich heritage, distinctive ambiance, and the
+                unique experiences it offers to coffee lovers worldwide.
+                <span class="md:hidden lg:mt-4 lg:block">
+                  In this captivating endeavor, each frame becomes a window into
+                  the world of Starbucks, revealing the brand's evolution,
+                  values, and the passion it holds for delivering exceptional
+                  coffee and creating memorable moments. From the first sip of
+                  that perfectly crafted cup of coffee to the warm and inviting
+                  atmosphere that embraces customers, this project aims to
+                  document the magical elements that make Starbucks a beloved
+                  destination for millions.
+                </span>
+                <span class="md:hidden lg:mt-4 lg:block">
+                  "Through the Lens: Exploring Starbucks' Story, One Frame at a
+                  Time" encapsulates the spirit of this project. By meticulously
+                  curating a collection of visually stunning photographs, this
+                  project invites viewers to immerse themselves in the essence
+                  of Starbucks, capturing its vibrant energy, friendly faces,
+                  and the sense of community that emanates from each store. From
+                  the iconic green mermaid logo to the artful baristas
+                  meticulously crafting beverages, each frame tells a story that
+                  weaves together the brand's dedication to quality, innovation,
+                  and customer experience.
+                </span>
+              </p>
+              <a
+                href="work/work.html"
+                class="rounded-md bg-secondary px-4 py-2 text-teal-100 transition duration-300 ease-in-out hover:bg-teal-800 hover:text-teal-50 dark:hover:shadow-lg dark:hover:shadow-teal-800/60 lg:px-5 lg:py-3"
+                data-aos="fade-left"
+                data-aos-delay="300"
+                data-aos-duration="1000"
+                >read more</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="pb-36 pt-96">
+          <div
+            class="block w-full gap-1 dark:drop-shadow-[5px_5px_100px_rgba(20,184,166,0.3)] md:p-6"
+          >
+            <div
+              class="mb-1 px-6 md:float-right"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <img
+                src="../../dist/img/project/project3.jpg"
+                alt="project3"
+                class="object-cover object-center md:h-96 md:w-72 lg:h-[512px] lg:w-96"
+              />
+            </div>
+            <div
+              class="mb-6 px-6 pb-6 pt-4 md:mb-0 md:px-4 md:py-4"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <h2
+                class="mb-2 text-lg font-semibold text-secondary dark:text-white md:text-xl lg:mb-4 lg:text-3xl"
+              >
+                Architectural Splendors
+              </h2>
+              <h4
+                class="mb-8 text-sm font-light text-teal-600 md:mb-4 lg:mb-4 lg:text-base"
+                data-aos="fade-right"
+                data-aos-delay="100"
+                data-aos-duration="1000"
+              >
+                Discover the
+                <a
+                  href="#"
+                  class="customlink transition duration-300 hover:text-teal-300"
+                  >Beauty</a
+                >
+                That Soars Above the Cityscape
+              </h4>
+              <p
+                class="hidden text-secondary dark:text-neutral-400 md:mb-8 md:block md:text-base lg:text-base"
+                data-aos="fade-right"
+                data-aos-delay="200"
+                data-aos-duration="1000"
+              >
+                Is an awe-inspiring project that invites you to embark on a
+                visual journey through the magnificent world of architecture.
+                This project aims to showcase the breathtaking beauty and
+                innovation that can be found in the soaring structures that
+                shape our cityscapes.
+                <span class="lg:mt-4 lg:block">
+                  With a keen eye for detail and a passion for capturing the
+                  essence of architectural marvels, this project unveils the
+                  hidden gems that exist in our urban environments. From iconic
+                  landmarks to hidden architectural gems, each photograph and
+                  description within "Architectural Splendors" paints a vivid
+                  picture of the artistic vision, engineering prowess, and
+                  cultural significance behind these structures.
+                </span>
+                <span class="md:hidden lg:mt-4 lg:block">
+                  The tagline "Discover the Beauty That Soars Above the
+                  Cityscape" encapsulates the essence of this project. It
+                  invites viewers to look up and appreciate the grandeur and
+                  elegance that these architectural wonders bring to the urban
+                  landscape. Through captivating images, fascinating facts, and
+                  insightful narratives, "Architectural Splendors" aims to
+                  inspire a sense of wonder and admiration for the buildings
+                  that shape our cities.
+                </span>
+                <span class="md:hidden lg:mt-4 lg:block">
+                  This project goes beyond showcasing the exterior aesthetics of
+                  buildings; it delves into the stories behind their creation.
+                  From the historical significance of ancient architectural
+                  masterpieces to the cutting-edge designs of contemporary
+                  structures, each feature within "Architectural Splendors"
+                  provides a glimpse into the vision, inspiration, and
+                  innovation that went into their construction.
+                </span>
+              </p>
+              <a
+                href="work/work.html"
+                class="rounded-md bg-secondary px-4 py-2 text-teal-100 transition duration-300 ease-in-out hover:bg-teal-800 hover:text-teal-50 dark:hover:shadow-lg dark:hover:shadow-teal-800/60 lg:px-5 lg:py-3"
+                data-aos="fade-right"
+                data-aos-delay="300"
+                data-aos-duration="1000"
+                >read more</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="pb-36 pt-96">
+          <div
+            class="block w-full gap-1 dark:drop-shadow-[5px_5px_100px_rgba(20,184,166,0.3)] md:p-6"
+          >
+            <div
+              class="mb-1 px-6 md:mb-0 md:px-2"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <img
+                src="../../dist/img/project/project4.jpg"
+                alt="Unlocking the Impact of Organizational Experience on Workforce"
+                class="object-cover object-center md:float-left md:mr-6 md:h-96 md:w-72 lg:h-[512px] lg:w-96"
+              />
+            </div>
+            <div
+              class="mb-6 px-6 pb-6 pt-4 md:mb-0 md:px-4 md:py-4"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <h2
+                class="mb-2 text-lg font-semibold text-secondary dark:text-white md:text-xl lg:mb-4 lg:text-3xl"
+              >
+                Unveiling Target Markets
+              </h2>
+              <h4
+                class="mb-8 text-sm font-light text-teal-600 md:mb-4 lg:mb-4 lg:text-base"
+                data-aos="fade-left"
+                data-aos-delay="100"
+                data-aos-duration="1000"
+              >
+                Insights Unlocked: Empowering Effective
+
+                <a
+                  href="https://admission.unisba.ac.id/fakultas-mipa/"
+                  class="customlink transition duration-300 hover:text-teal-300"
+                  >Strategic</a
+                >
+                Decision-Making
+              </h4>
+              <p
+                class="hidden text-secondary dark:text-neutral-400 md:mb-8 md:block md:text-base lg:text-base"
+                data-aos="fade-left"
+                data-aos-delay="200"
+                data-aos-duration="1000"
+              >
+                Is a comprehensive project that aims to uncover and analyze the
+                primary target markets for a specific product, brand, or
+                company. By delving deeply into market research and consumer
+                insights, this project aims to empower businesses with the
+                knowledge and understanding needed to make effective strategic
+                decisions.
+                <span class="md:hidden lg:mt-4 lg:block">
+                  Through meticulous data collection, segmentation analysis, and
+                  market trends assessment, "Unveiling Target Markets" provides
+                  a comprehensive view of the target markets, their
+                  characteristics, preferences, and behaviors. By unlocking
+                  these valuable insights, businesses gain a competitive
+                  advantage and can tailor their marketing strategies to
+                  resonate with their target audience.
+                </span>
+                <span class="md:hidden lg:mt-4 lg:block">
+                  The tagline "Insights Unlocked: Empowering Effective Strategic
+                  Decision-Making" encapsulates the essence of this project. It
+                  emphasizes the importance of actionable insights in driving
+                  successful strategic decision-making processes. By leveraging
+                  the power of market research, businesses can uncover hidden
+                  opportunities, identify unmet needs, and develop targeted
+                  marketing campaigns that resonate with their ideal customers.
+                </span>
+                <span class="md:hidden lg:mt-4 lg:block">
+                  This project goes beyond surface-level analysis and delves
+                  into the intricacies of target markets. It seeks to understand
+                  the psychographic, demographic, and behavioral aspects that
+                  influence consumer decision-making processes. By examining
+                  factors such as consumer preferences, purchasing patterns,
+                  lifestyle choices, and emerging trends, businesses can gain a
+                  deeper understanding of their target markets and align their
+                  strategies accordingly.
+                </span>
+                <span class="md:hidden lg:mt-4 lg:block">
+                  "Unveiling Target Markets" offers a comprehensive and
+                  data-driven approach to market analysis. It combines
+                  qualitative and quantitative research methodologies, including
+                  surveys, focus groups, interviews, and data analytics, to
+                  provide a holistic view of the target markets. By
+                  triangulating multiple data sources and employing robust
+                  analysis techniques, this project ensures the accuracy and
+                  reliability of the insights generated.
+                </span>
+              </p>
+              <a
+                href="work/work.html"
+                class="rounded-md bg-secondary px-4 py-2 text-teal-100 transition duration-300 ease-in-out hover:bg-teal-800 hover:text-teal-50 dark:hover:shadow-lg dark:hover:shadow-teal-800/60 lg:px-5 lg:py-3"
+                data-aos="fade-left"
+                data-aos-delay="300"
+                data-aos-duration="1000"
+                >read more</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="pb-36 pt-96">
+          <div
+            class="block w-full gap-1 dark:drop-shadow-[5px_5px_100px_rgba(20,184,166,0.3)] md:p-6"
+          >
+            <div
+              class="mb-1 px-6 md:float-right"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              <img
+                src="../../dist/img/project/project5.jpg"
+                alt="project3"
+                class="object-cover object-center md:h-96 md:w-72 lg:h-[512px] lg:w-96"
+              />
+            </div>
+            <div
+              class="mb-6 px-6 pb-6 pt-4 md:mb-0 md:px-4 md:py-4"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <h2
+                class="mb-2 text-lg font-semibold text-secondary dark:text-white md:text-xl lg:mb-4 lg:text-3xl"
+              >
+                Predicting Revenue Growth
+              </h2>
+              <h4
+                class="mb-8 text-sm font-light text-teal-600 md:mb-4 lg:mb-4 lg:text-base"
+                data-aos="fade-right"
+                data-aos-delay="100"
+                data-aos-duration="1000"
+              >
+                Discover the
+                <a
+                  href="#"
+                  class="customlink transition duration-300 hover:text-teal-300"
+                  >Beauty</a
+                >
+                Empower Sales Strategies that Rely on Data for Business Success
+              </h4>
+              <p
+                class="hidden text-secondary dark:text-neutral-400 md:mb-8 md:block md:text-base lg:text-base"
+                data-aos="fade-right"
+                data-aos-delay="200"
+                data-aos-duration="1000"
+              >
+                Dynamic project that harnesses the power of data analysis to
+                empower businesses in making informed sales strategies for
+                achieving sustainable revenue growth. By leveraging advanced
+                analytics and predictive modeling techniques, this project aims
+                to provide businesses with actionable insights that drive
+                success in their sales efforts.
+                <span class="lg:mt-4 lg:block">
+                  With a focus on data-driven decision-making, "Predicting
+                  Revenue Growth" enables businesses to unlock the potential of
+                  their sales strategies. By analyzing historical sales data,
+                  market trends, customer behavior, and other relevant factors,
+                  this project uncovers patterns and correlations that can
+                  predict future revenue growth opportunities.
+                </span>
+                <span class="md:hidden lg:mt-4 lg:block">
+                  The tagline "Empower Sales Strategies that Rely on Data for
+                  Business Success" captures the essence of this project. It
+                  emphasizes the importance of utilizing data to inform and
+                  enhance sales strategies, enabling businesses to make
+                  strategic decisions based on accurate and reliable insights.
+                  By incorporating data-driven approaches into sales planning
+                  and execution, businesses can optimize their resources, target
+                  the right market segments, and drive revenue growth.
+                </span>
+                <span class="md:hidden lg:mt-4 lg:block">
+                  This project goes beyond traditional forecasting methods and
+                  introduces advanced predictive modeling techniques. By
+                  utilizing machine learning algorithms and statistical
+                  analysis, it uncovers hidden patterns, identifies potential
+                  market shifts, and predicts customer buying behaviors. Armed
+                  with these insights, businesses can proactively adjust their
+                  sales strategies, align their resources, and seize
+                  opportunities for growth.
+                </span>
+              </p>
+              <a
+                href="work/work.html"
+                class="rounded-md bg-secondary px-4 py-2 text-teal-100 transition duration-300 ease-in-out hover:bg-teal-800 hover:text-teal-50 dark:hover:shadow-lg dark:hover:shadow-teal-800/60 lg:px-5 lg:py-3"
+                data-aos="fade-right"
+                data-aos-delay="300"
+                data-aos-duration="1000"
+                >read more</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="pb-36 pt-96">
+          <div
+            class="w-full gap-1 dark:drop-shadow-[5px_5px_100px_rgba(20,184,166,0.3)] md:p-6"
+          >
+            <div class="px-6 text-center">
+              <h1 class="text-base dark:text-teal-500 md:text-lg">
+                look forward to my newest project!
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Content End -->
+    <!-- Footer Start -->
+    <footer
+      class="bg-neutral-950 pb-12 pt-24 selection:bg-teal-700 selection:text-white dark:bg-dark dark:selection:bg-teal-300 dark:selection:text-dark"
+    >
+      <div class="container">
+        <div class="flex-wrap justify-center md:flex">
+          <div class="mb-6 px-4 text-white md:w-2/5 lg:w-2/4">
+            <h2 class="mb-2 text-xl font-light text-gray-300">Indriyani</h2>
+            <ul>
+              <li>
+                <a
+                  href="mailto:indriani.indri2239@gmail.com"
+                  target="_blank"
+                  class="footer-menu font-medium md:text-lg lg:text-2xl"
+                >
+                  indriani.indri2239@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.link/t4ikqt"
+                  target="_blank"
+                  class="footer-menu font-medium md:text-lg lg:text-2xl"
+                  >+62 813 1508 3032</a
+                >
+              </li>
+            </ul>
+
+            <h2
+              class="md:text-md mb-4 mt-10 font-light text-gray-300 lg:text-xl"
+            >
+              Connect
+            </h2>
+            <a href="https://www.instagram.com/indriyaaaani/" target="_blank"
+              ><box-icon
+                type="logo"
+                name="instagram"
+                class="mr-2 h-10 w-10 rounded-full border-2 border-white fill-white p-2 transition duration-300 ease-in-out hover:scale-110 hover:border-white hover:bg-gradient-to-tr hover:from-[#FFD954] hover:via-[#DA1984] hover:to-[#3D55DD] hover:fill-white hover:outline hover:outline-pink-700"
+              ></box-icon
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/indriyani-4b15b9209"
+              target="_blank"
+              ><box-icon
+                type="logo"
+                name="linkedin"
+                class="mr-2 h-10 w-10 rounded-full border-2 border-white fill-white p-2 transition duration-300 ease-in-out hover:scale-110 hover:border-white hover:bg-sky-600 hover:fill-white hover:outline hover:outline-sky-600"
+              ></box-icon
+            ></a>
+            <a
+              href="https://www.tiktok.com/@indriyanidriya?_t=8cooRa2SWro&_r=1"
+              target="_blank"
+              ><box-icon
+                type="logo"
+                name="tiktok"
+                class="mr-2 h-10 w-10 rounded-full border-2 border-white fill-white p-2 transition duration-300 ease-in-out hover:scale-110 hover:border-white hover:bg-black hover:fill-white hover:outline hover:outline-rose-500"
+              ></box-icon
+            ></a>
+          </div>
+          <div class="mb-6 px-4 text-white md:w-1/5 lg:w-1/4">
+            <h2 class="mb-2 text-xl font-light text-gray-300">Menu</h2>
+            <ul>
+              <li>
+                <a
+                  href="#home"
+                  class="footer-menu font-medium md:text-lg lg:text-2xl"
+                  >Home</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mb-6 px-4 text-white md:w-1/5 md:text-right lg:w-1/4">
+            <h2 class="mb-2 text-xl font-light text-gray-300">My Office</h2>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d247.58590026109854!2d107.5018510325084!3d-6.845640914916571!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNTAnNDQuMCJTIDEwN8KwMzAnMDYuNiJF!5e0!3m2!1sid!2sid!4v1685879157647!5m2!1sid!2sid"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="h-32 w-full md:float-right md:h-32 md:w-40 lg:h-48 lg:w-48"
+            ></iframe>
+          </div>
+        </div>
+        <hr class="h-px border-0 bg-gray-600 dark:bg-gray-700" />
+        <div class="mt-4 w-full text-center lg:px-4 lg:text-left">
+          <p class="text-sm font-extralight text-gray-300">
+            <a
+              href="https://www.instagram.com/indriyaaaani/"
+              target="_blank"
+              class="credit"
+              >©Indriyani. </a
+            >All Rights Reserved 2023.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- Back to TOP start -->
+    <a
+      href="#home"
+      id="to-top"
+      class="group fixed bottom-6 right-6 z-[9999] hidden h-14 w-14 animate-myAnim rounded-full border-2 border-teal-500 bg-white/30 text-center backdrop-blur-sm transition-all duration-500 ease-in-out hover:border-white hover:bg-teal-500 dark:border-white dark:bg-teal-500/40 dark:hover:border-secondary dark:hover:bg-white"
+      ><box-icon
+        name="chevrons-up"
+        class="mt-[14px] fill-teal-500 group-hover:fill-white dark:fill-white dark:group-hover:fill-secondary"
+      ></box-icon
+    ></a>
+    <!-- Back to TOP end -->
+    <!-- ICON -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <!-- SCRIPT -->
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Figtree", sans-serif;
+}
+
+.display-none {
+  @apply hidden;
+}
+
+.navbar-fixed {
+  @apply fixed z-[9999] bg-white bg-opacity-50 shadow-custom backdrop-blur-md dark:bg-dark dark:bg-opacity-50 dark:shadow-none;
+}
+
+.hamburger-line {
+  @apply my-2 block h-[2px] w-[30px] bg-secondary dark:bg-white;
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
+
+@layer utilities {
+  .link {
+    @apply relative;
+  }
+
+  .link::after {
+    @apply absolute bottom-[5px] left-0 h-[2px] w-[0%] rounded-full bg-teal-500 transition-all duration-500 content-[''];
+  }
+
+  .link:hover::after {
+    @apply w-[100%];
+  }
+}
+
+@layer utilities {
+  .footer-menu {
+    @apply relative;
+  }
+
+  .footer-menu:after {
+    @apply absolute bottom-[-1px] left-0 h-[2px] w-[0%] bg-white transition-all duration-500 content-[''];
+  }
+
+  .footer-menu:hover::after {
+    @apply w-[100%];
+  }
+}
+@layer utilities {
+  .customlink {
+    @apply relative;
+  }
+
+  .customlink:after {
+    @apply absolute bottom-[-1px] left-0 h-[2px] w-[0%] bg-teal-300 transition-all duration-500 content-[''];
+  }
+
+  .customlink:hover::after {
+    @apply w-[100%];
+  }
+}
+
+@layer utilities {
+  .credit {
+    @apply relative;
+  }
+  .credit:after {
+    @apply absolute bottom-[-1px] left-0 h-[1px] w-[0%] bg-gray-300 transition-all duration-300 content-[''];
+  }
+
+  .credit:hover::after {
+    @apply w-[95%];
+  }
+}
+
+@layer utilities {
+  #popup {
+    @apply bg-black/50;
+  }
+
+  #popup-content {
+    @apply max-w-[400px];
+  }
+}
+
+#dark-toggle:checked ~ label div.toggle-circle {
+  @apply translate-x-4;
+}
+
+/* Work Section */
